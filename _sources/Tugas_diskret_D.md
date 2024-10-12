@@ -5,11 +5,14 @@ title: Himpunan
 
 
 
+
+# TUGAS HIMPUNAN
+
 NAMA :Fahrizal umam
 NIM  :230411100056
 KELAS:IF2D
 
-# PEMBUKTIAN DAN CONTOH DE MORGAN
+### PEMBUKTIAN DAN CONTOH DE MORGAN
 
 $$
 \begin{aligned}

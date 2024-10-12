@@ -6,7 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - My sample book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BOOLEAN &#8212; My sample book</title>
   
   
   
@@ -55,12 +57,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'search';</script>
-  <script src="_static/searchtools.js"></script>
-  <script src="_static/language_data.js"></script>
-  <script src="searchindex.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ALJABAR_BOOLEAN';</script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="HIMPUNAN" href="HIMPUNAN.html" />
+    <link rel="prev" title="PEMBUKTIAN DAN CONTOH DE MORGAN" href="Tugas_diskret_D.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -92,7 +95,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="#"
+      action="search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -122,8 +125,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -180,13 +181,13 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ALGORITMA.html">ALGORITMA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logika_matematika.html">LOGIKA MATEMATIKA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas_diskret_D.html">PEMBUKTIAN DAN CONTOH DE MORGAN</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="ALJABAR_BOOLEAN.html">BOOLEAN</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">BOOLEAN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HIMPUNAN.html">HIMPUNAN</a></li>
 
 
@@ -261,7 +262,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsearch.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FALJABAR_BOOLEAN.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -273,6 +274,54 @@
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ALJABAR_BOOLEAN.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -314,7 +363,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -323,42 +374,109 @@ document.write(`
 </div>
               
               
-  <div class="bd-search-container">
-    <h1>Search</h1>
-    <noscript>
-      <div class="admonition error">
-        <p class="admonition-title">Error</p>
-        <p>Please activate JavaScript to enable the search functionality.</p>
-      </div>
-    </noscript>
-    
-<form class="bd-search d-flex align-items-center"
-      action="#"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    <div id="search-results"></div>
-  </div>
-  <script>
-    // Activate the search field on page load
-    let searchInput = document.querySelector("form.bd-search input");
-    if (searchInput) {
-        searchInput.focus();
-        searchInput.select();
-        console.log("[PST]: Set focus on search field.");
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>BOOLEAN</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">REFERENCES</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-biner">Operator Biner</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">References</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-uner">Operator Uner</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">REFERENCES:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat-dalam-pemrograman-boolean">Manfaat dalam pemrograman boolean</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-algebra">Boolean Algebra</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">REFERENCES:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="boolean">
+<h1>BOOLEAN<a class="headerlink" href="#boolean" title="Link to this heading">#</a></h1>
+<p>NAMA :Fahrizal umam
+NIM  :230411100056
+KELAS:IF2D</p>
+<p>adalah tipe data paling standar yang hanya menyatakan kebenaran, apakah TRUE (benar) atau FALSE (salah).Tipe data boolean disebut juga sebagai tipe data kondisi logika.</p>
+<section id="references">
+<h2>REFERENCES<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://id.wikipedia.org/wiki/Aljabar_Boolean">https://id.wikipedia.org/wiki/Aljabar_Boolean</a></p>
+</section>
+<section id="operator-biner">
+<h2>Operator Biner<a class="headerlink" href="#operator-biner" title="Link to this heading">#</a></h2>
+<p>operasi biner dengan himpunan adalah operasi yang dua domain dan kodomain adalah himpunan yang sama. Contohnya termasuk operasi aritmetika dari penambahan, pengurangan, perkalian. Contoh lain ditemukan di berbagai bidang matematika, seperti penjumlahan vektor, perkalian matriks dan konjugasi dalam grup.</p>
+<section id="id1">
+<h3>References<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://learn.microsoft.com/id-id/cpp/cpp/binary-operators?view=msvc-170">https://learn.microsoft.com/id-id/cpp/cpp/binary-operators?view=msvc-170</a></p>
+</section>
+</section>
+<section id="operator-uner">
+<h2>Operator Uner<a class="headerlink" href="#operator-uner" title="Link to this heading">#</a></h2>
+<p>operasi uner adalah operasi dengan hanya satu operand, yaitu satu input.Ini berbeda dengan operasi biner, yang menggunakan dua operan.Contohnya adalah fungsi <span class="math notranslate nohighlight">\(f : A \to A\)</span>, di mana A adalah himpunan. Fungsi f adalah operasi unary pada A.</p>
+<section id="id2">
+<h3>REFERENCES:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://id.wikipedia.org/wiki/Operasi_uner">https://id.wikipedia.org/wiki/Operasi_uner</a></p>
+</section>
+</section>
+<section id="manfaat-dalam-pemrograman-boolean">
+<h2>Manfaat dalam pemrograman boolean<a class="headerlink" href="#manfaat-dalam-pemrograman-boolean" title="Link to this heading">#</a></h2>
+<p>Aljabar bolean sering digunakan dalam pemrograman untuk mengevaluasi ekspresi logika</p>
+</section>
+<section id="boolean-algebra">
+<h2>Boolean Algebra<a class="headerlink" href="#boolean-algebra" title="Link to this heading">#</a></h2>
+<p>Tabel Kebenaran untuk fungsi boolean:</p>
+<p><span class="math notranslate nohighlight">\(f(x, y, z) = xz + y\)</span>.</p>
+<p>ditunjukkan sebelah kanan.
+untuk mempermudah evaluasi fungsi boolean, tabel kebenaran berisi kolom tambahan (diarsir) untuk menyimpan evaluasi dari bagian-bagian subfungsi</p>
+<p>Sebagian besar identitas Boolean memiliki bentuk AND (perkalian) serta bentuk OR (jumlah).</p>
+<section id="id3">
+<h3>REFERENCES:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://byjus.com/maths/boolean-algebra/">https://byjus.com/maths/boolean-algebra/</a></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
     }
-  </script>
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
 
               
               
@@ -367,12 +485,58 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Tugas_diskret_D.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">PEMBUKTIAN DAN CONTOH DE MORGAN</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="HIMPUNAN.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">HIMPUNAN</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">REFERENCES</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-biner">Operator Biner</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">References</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-uner">Operator Uner</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">REFERENCES:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat-dalam-pemrograman-boolean">Manfaat dalam pemrograman boolean</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-algebra">Boolean Algebra</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">REFERENCES:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
