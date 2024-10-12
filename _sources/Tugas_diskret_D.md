@@ -1,5 +1,5 @@
 ---
-title: Himpunan
+title: Tugas
 
 ---
 
@@ -8,8 +8,8 @@ title: Himpunan
 NAMA :Fahrizal umam
 NIM  :230411100056
 KELAS:IF2D
-
-# PEMBUKTIAN DAN CONTOH DE MORGAN
+# TUGAS
+## PEMBUKTIAN DAN CONTOH DE MORGAN
 
 $$
 \begin{aligned}
