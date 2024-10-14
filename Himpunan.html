@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>BOOLEAN &#8212; Matematika Diskret</title>
+    <title>HIMPUNAN &#8212; Matematika Diskret</title>
   
   
   
@@ -59,10 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ALJABAR_BOOLEAN';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Himpunan';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="ALGORITMA" href="ALGORITMA.html" />
+    <link rel="next" title="ALGORITMA" href="ALGORITMA.html" />
+    <link rel="prev" title="Welcome Fahrizal umam" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,9 +182,9 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Himpunan.html">HIMPUNAN</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">HIMPUNAN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ALGORITMA.html">ALGORITMA</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">BOOLEAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ALJABAR_BOOLEAN.html">BOOLEAN</a></li>
 </ul>
 
     </div>
@@ -255,7 +256,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FALJABAR_BOOLEAN.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FHimpunan.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +286,7 @@
       
       
       
-      <li><a href="_sources/ALJABAR_BOOLEAN.md" target="_blank"
+      <li><a href="_sources/Himpunan.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,7 +370,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>BOOLEAN</h1>
+    <h1>HIMPUNAN</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,18 +380,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">REFERENCES</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-biner">Operator Biner</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">REFERENCES</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-himpunan-dan-operasi-himpunan"># Jenis-Jenis Himpunan dan Operasi Himpunan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#himpunan-semesta">Himpunan Semesta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#himpunan-kosong">Himpunan Kosong</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#himpunan-bagian">Himpunan Bagian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-himpunan">Operasi Himpunan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#irisan">Irisan (∩)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gabungan">Gabungan (∪)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selisih">Selisih (–)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#komplemen">Komplemen</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#refernces">REFERNCES:</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-uner">Operator Uner</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">REFERENCES:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat-dalam-pemrograman-boolean">Manfaat dalam Pemrograman Boolean</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-algebra">Boolean Algebra</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">REFERENCES:</a></li>
 </ul>
 </li>
 </ul>
@@ -404,53 +405,134 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="boolean">
-<h1>BOOLEAN<a class="headerlink" href="#boolean" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="himpunan">
+<h1>HIMPUNAN<a class="headerlink" href="#himpunan" title="Link to this heading">#</a></h1>
 <p>NAMA :Fahrizal umam
 NIM  :230411100056
 KELAS:IF2D</p>
-<p>Boolean adalah tipe data paling standar yang hanya menyatakan kebenaran, apakah <strong>TRUE</strong> (benar) atau <strong>FALSE</strong> (salah). Tipe data boolean disebut juga sebagai tipe data kondisi logika.</p>
-<section id="references">
-<h2>REFERENCES<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://id.wikipedia.org/wiki/Aljabar_Boolean">https://id.wikipedia.org/wiki/Aljabar_Boolean</a></p>
+<section id="jenis-jenis-himpunan-dan-operasi-himpunan">
+<h2># Jenis-Jenis Himpunan dan Operasi Himpunan<a class="headerlink" href="#jenis-jenis-himpunan-dan-operasi-himpunan" title="Link to this heading">#</a></h2>
 </section>
-<section id="operator-biner">
-<h2>Operator Biner<a class="headerlink" href="#operator-biner" title="Link to this heading">#</a></h2>
-<p>Operasi biner dengan himpunan adalah operasi di mana domain dan kodomain adalah himpunan yang sama. Contohnya termasuk operasi aritmetika seperti penambahan, pengurangan, dan perkalian. Contoh lain ditemukan di berbagai bidang matematika, seperti penjumlahan vektor, perkalian matriks, dan konjugasi dalam grup.</p>
-<section id="id1">
-<h3>REFERENCES<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://learn.microsoft.com/id-id/cpp/cpp/binary-operators?view=msvc-170">https://learn.microsoft.com/id-id/cpp/cpp/binary-operators?view=msvc-170</a></p>
-</section>
-</section>
-<section id="operator-uner">
-<h2>Operator Uner<a class="headerlink" href="#operator-uner" title="Link to this heading">#</a></h2>
-<p>Operasi uner adalah operasi yang hanya memiliki satu operand, yaitu satu input. Ini berbeda dengan operasi biner, yang menggunakan dua operan. Contohnya adalah fungsi:</p>
+<section id="himpunan-semesta">
+<h2>Himpunan Semesta<a class="headerlink" href="#himpunan-semesta" title="Link to this heading">#</a></h2>
+<p>Himpunan semesta merupakan himpunan yang memuat semua anggota atau objek himpunan yang sedang dibicarakan. Himpunan semesta disimbolkan dengan <strong>S</strong>.</p>
+<p><strong>Contoh:</strong></p>
 <div class="math notranslate nohighlight">
 \[
-f: A \to A
+A = \{3, 5, 7, 9\}
 \]</div>
-<p>di mana (A) adalah himpunan. Fungsi (f) adalah operasi unary pada (A).</p>
-<section id="id2">
-<h3>REFERENCES:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://id.wikipedia.org/wiki/Operasi_uner">https://id.wikipedia.org/wiki/Operasi_uner</a></p>
-</section>
-</section>
-<section id="manfaat-dalam-pemrograman-boolean">
-<h2>Manfaat dalam Pemrograman Boolean<a class="headerlink" href="#manfaat-dalam-pemrograman-boolean" title="Link to this heading">#</a></h2>
-<p>Aljabar boolean sering digunakan dalam pemrograman untuk mengevaluasi ekspresi logika.</p>
-</section>
-<section id="boolean-algebra">
-<h2>Boolean Algebra<a class="headerlink" href="#boolean-algebra" title="Link to this heading">#</a></h2>
-<p>Tabel kebenaran untuk fungsi boolean:</p>
+<p>Himpunan semesta yang mungkin adalah:</p>
 <div class="math notranslate nohighlight">
 \[
-f(x, y, z) = xz + y
+S = \{\text{bilangan ganjil}\}, \quad S = \{\text{bilangan asli}\}, \quad S = \{\text{bilangan cacah}\}, \quad S = \{\text{bilangan real}\}
 \]</div>
-<p>ditunjukkan di sebelah kanan. Untuk mempermudah evaluasi fungsi boolean, tabel kebenaran berisi kolom tambahan (diarsir) untuk menyimpan evaluasi dari bagian-bagian subfungsi.</p>
-<p>Sebagian besar identitas Boolean memiliki bentuk AND (perkalian) serta bentuk OR (penjumlahan).</p>
-<section id="id3">
-<h3>REFERENCES:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://byjus.com/maths/boolean-algebra/">https://byjus.com/maths/boolean-algebra/</a></p>
+<blockquote>
+<div><p><strong>Catatan:</strong><br />
+Himpunan semesta tidak bisa dituliskan sebagai ( S = {\text{bilangan prima}} ) karena angka 9 bukan bilangan prima.</p>
+</div></blockquote>
+</section>
+<section id="himpunan-kosong">
+<h2>Himpunan Kosong<a class="headerlink" href="#himpunan-kosong" title="Link to this heading">#</a></h2>
+<p>Himpunan kosong adalah himpunan yang tidak mempunyai anggota sama sekali. Himpunan kosong disimbolkan dengan <strong>Ø</strong> atau <strong>{}</strong>.</p>
+<p><strong>Contoh:</strong>
+Misalkan B adalah himpunan bilangan ganjil yang habis dibagi dua. Karena tidak ada bilangan ganjil yang habis dibagi dua, maka B adalah himpunan kosong:</p>
+<div class="math notranslate nohighlight">
+\[
+B = \{\} \quad \text{atau} \quad B = \emptyset
+\]</div>
+<p><strong>Contoh Soal:</strong></p>
+<ul class="simple">
+<li><p>Himpunan A adalah himpunan huruf vokal.</p></li>
+<li><p>Himpunan B adalah himpunan nama-nama hari berawalan “C”.</p></li>
+</ul>
+<p>Jawabannya adalah B, karena tidak ada nama hari yang diawali dengan huruf “C”. Jadi, himpunan B adalah himpunan kosong.</p>
+</section>
+<section id="himpunan-bagian">
+<h2>Himpunan Bagian<a class="headerlink" href="#himpunan-bagian" title="Link to this heading">#</a></h2>
+<p>Himpunan A disebut himpunan bagian dari himpunan B jika setiap anggota A juga merupakan anggota B. Ini dinotasikan dengan <strong>A ⊂ B</strong> atau <strong>B ⊃ A</strong>.</p>
+<p><strong>Contoh:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+P = \{1, 2, 3\}, \quad Q = \{1, 2, 3, 4, 5\}
+\]</div>
+<p>Maka,</p>
+<div class="math notranslate nohighlight">
+\[
+P \subseteq Q \quad \text{atau} \quad Q \supseteq P
+\]</div>
+<p>Jika ada anggota A yang bukan anggota B, maka A bukan himpunan bagian dari B, dinotasikan dengan <strong>A ⊄ B</strong>.</p>
+<p><strong>Contoh:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+Q = \{1, 2, 3, 4, 5\}, \quad R = \{4, 5, 6\}
+\]</div>
+<p>Maka,</p>
+<div class="math notranslate nohighlight">
+\[
+R \nsubseteq Q
+\]</div>
+</section>
+<section id="operasi-himpunan">
+<h2>Operasi Himpunan<a class="headerlink" href="#operasi-himpunan" title="Link to this heading">#</a></h2>
+<section id="irisan">
+<h3>Irisan (∩)<a class="headerlink" href="#irisan" title="Link to this heading">#</a></h3>
+<p>Irisan dari dua himpunan A dan B adalah himpunan yang anggota-anggotanya ada di himpunan A dan juga di himpunan B. Irisan dinotasikan dengan <strong>A ∩ B</strong>.</p>
+<p><strong>Contoh:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+A = \{a, b, c, d, e\}, \quad B = \{b, c, e, g, k\}
+\]</div>
+<p>Maka,</p>
+<div class="math notranslate nohighlight">
+\[
+A \cap B = \{b, c\}
+\]</div>
+</section>
+<section id="gabungan">
+<h3>Gabungan (∪)<a class="headerlink" href="#gabungan" title="Link to this heading">#</a></h3>
+<p>Gabungan dari dua himpunan A dan B adalah himpunan yang anggotanya merupakan gabungan dari anggota himpunan A dan B. Gabungan dinotasikan dengan <strong>A ∪ B</strong>.</p>
+<p><strong>Contoh:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+A = \{a, b, c, d, e\}, \quad B = \{b, c, e, g, k\}
+\]</div>
+<p>Maka,</p>
+<div class="math notranslate nohighlight">
+\[
+A \cup B = \{a, b, c, d, e, g, k\}
+\]</div>
+</section>
+<section id="selisih">
+<h3>Selisih (–)<a class="headerlink" href="#selisih" title="Link to this heading">#</a></h3>
+<p>Selisih antara dua himpunan A dan B adalah himpunan dari anggota A yang tidak termasuk dalam himpunan B. Selisih dinotasikan dengan <strong>A - B</strong>.</p>
+<p><strong>Contoh:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+A = \{a, b, c, d, e\}, \quad B = \{b, c, e, g, k\}
+\]</div>
+<p>Maka,</p>
+<div class="math notranslate nohighlight">
+\[
+A - B = \{a, d\}
+\]</div>
+</section>
+<section id="komplemen">
+<h3>Komplemen<a class="headerlink" href="#komplemen" title="Link to this heading">#</a></h3>
+<p>Komplemen dari suatu himpunan adalah unsur-unsur yang ada di himpunan semesta (universal) kecuali anggota himpunan tersebut. Komplemen dari A dinotasikan dengan <strong>A^c</strong> atau <strong>A^komplemen</strong>.</p>
+<p><strong>Contoh:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+A = \{1, 3, 5, 7, 9\}, \quad S = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}
+\]</div>
+<p>Maka,</p>
+<div class="math notranslate nohighlight">
+\[
+A^c = \{2, 4, 6, 8, 10\}
+\]</div>
+<section id="refernces">
+<h4>REFERNCES:<a class="headerlink" href="#refernces" title="Link to this heading">#</a></h4>
+<p><a class="reference external" href="https://www.gramedia.com/literasi/himpunan/">https://www.gramedia.com/literasi/himpunan/</a></p>
+</section>
 </section>
 </section>
 </section>
@@ -486,13 +568,22 @@ f(x, y, z) = xz + y
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ALGORITMA.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome Fahrizal umam</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ALGORITMA.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">ALGORITMA</p>
       </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -510,18 +601,18 @@ f(x, y, z) = xz + y
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">REFERENCES</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-biner">Operator Biner</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">REFERENCES</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-himpunan-dan-operasi-himpunan"># Jenis-Jenis Himpunan dan Operasi Himpunan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#himpunan-semesta">Himpunan Semesta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#himpunan-kosong">Himpunan Kosong</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#himpunan-bagian">Himpunan Bagian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-himpunan">Operasi Himpunan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#irisan">Irisan (∩)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gabungan">Gabungan (∪)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selisih">Selisih (–)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#komplemen">Komplemen</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#refernces">REFERNCES:</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-uner">Operator Uner</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">REFERENCES:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat-dalam-pemrograman-boolean">Manfaat dalam Pemrograman Boolean</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-algebra">Boolean Algebra</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">REFERENCES:</a></li>
 </ul>
 </li>
 </ul>

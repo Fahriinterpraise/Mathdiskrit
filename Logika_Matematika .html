@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>BOOLEAN &#8212; Matematika Diskret</title>
+    <title>LOGIKA MATEMATIKA &#8212; Matematika Diskret</title>
   
   
   
@@ -59,10 +59,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ALJABAR_BOOLEAN';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Logika_Matematika ';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="ALGORITMA" href="ALGORITMA.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,6 +124,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,10 +181,10 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Himpunan.html">HIMPUNAN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ALGORITMA.html">ALGORITMA</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">BOOLEAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ALJABAR_BOOLEAN.html">BOOLEAN</a></li>
 </ul>
 
     </div>
@@ -255,7 +256,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FALJABAR_BOOLEAN.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLogika_Matematika .html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +286,7 @@
       
       
       
-      <li><a href="_sources/ALJABAR_BOOLEAN.md" target="_blank"
+      <li><a href="_sources/Logika_Matematika .md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,7 +370,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>BOOLEAN</h1>
+    <h1>LOGIKA MATEMATIKA</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,18 +380,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">REFERENCES</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-biner">Operator Biner</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">REFERENCES</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-uner">Operator Uner</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">REFERENCES:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat-dalam-pemrograman-boolean">Manfaat dalam Pemrograman Boolean</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-algebra">Boolean Algebra</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">REFERENCES:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negasi">NEGASI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konjungsi">KONJUNGSI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disjungsi">DISJUNGSI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implikasi">IMPLIKASI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biimplikasi">BIIMPLIKASI</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">REFERENCES:</a></li>
 </ul>
 </li>
 </ul>
@@ -404,53 +399,163 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="boolean">
-<h1>BOOLEAN<a class="headerlink" href="#boolean" title="Link to this heading">#</a></h1>
-<p>NAMA :Fahrizal umam
-NIM  :230411100056
-KELAS:IF2D</p>
-<p>Boolean adalah tipe data paling standar yang hanya menyatakan kebenaran, apakah <strong>TRUE</strong> (benar) atau <strong>FALSE</strong> (salah). Tipe data boolean disebut juga sebagai tipe data kondisi logika.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="logika-matematika">
+<h1>LOGIKA MATEMATIKA<a class="headerlink" href="#logika-matematika" title="Link to this heading">#</a></h1>
+<section id="negasi">
+<h2>NEGASI<a class="headerlink" href="#negasi" title="Link to this heading">#</a></h2>
+<p>Dilansir dari Boston University, negasi adalah kalimat yanyengsesuatu yang tidak terjadi. Atau dapat disebutkan bahwa negasi adalah kebalikan dari preposisi. Negasi ditandai dengan simbol <span class="math notranslate nohighlight">\(\sim\)</span>. Jika preposisi awal p bernilai benar, maka pernyataan negasinya <span class="math notranslate nohighlight">\(\sim p\)</span> adalah salah.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>p</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\sim p\)</span></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="konjungsi">
+<h2>KONJUNGSI<a class="headerlink" href="#konjungsi" title="Link to this heading">#</a></h2>
+<p>Konjungsi adalah logika matematika yang menarik kesimpulan dari dua premis. Konjungsi terdiri dari dua pernyataan (p dan q) yang berlaku untuk kata depan majemuk atau dihubungkan oleh kata “dan”.
+Konjungsi yang dilaporkan oleh Mathematics LibreTexts benar hanya jika kedua premisnya benar. Juga, jika salah satu atau kedua pernyataan itu salah, maka disjungsinya juga akan bernilai salah. Konjungsi disimbolkan dengan (<span class="math notranslate nohighlight">\(\land\)</span>). Kebenaran kalimat dengan konjungsi dijelaskan dalam tabel kebenaran konjungsi.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>p</p></th>
+<th class="head"><p>q</p></th>
+<th class="head"><p>p <span class="math notranslate nohighlight">\(\land\)</span> q</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="disjungsi">
+<h2>DISJUNGSI<a class="headerlink" href="#disjungsi" title="Link to this heading">#</a></h2>
+<p>Disjungsi adalah logika matematika yang membandingkan dua obyek. Disjungsi dicirikan dengan kata “atau” dan dilambangkan dengan “<span class="math notranslate nohighlight">\(\lor\)</span>”. Seperti dilansir The Stanford Encyclopedia of Philosophy, pernyataan disjungsi bernilai benar jika salah satu pernyataan benar dan salah jika keduanya salah. Artinya, disjungsi hanya bernilai salah jika kedua pernyataan salah dan tetap bernilai benar jika hanya salah satunya yang salah.</p>
+<p>Berikut adalah tabel kebenaran disjungsi!</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>p</p></th>
+<th class="head"><p>q</p></th>
+<th class="head"><p>p <span class="math notranslate nohighlight">\(\lor\)</span> q</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="implikasi">
+<h2>IMPLIKASI<a class="headerlink" href="#implikasi" title="Link to this heading">#</a></h2>
+<p>Implikasi merupakan logika matematika berupa pernyataan majemuk. Implikasi menunjukkan hubungan sebab dan akibat, menggunakan konjungsi seperti “jika” dan “maka”, juga disimbolkan oleh karakter “<span class="math notranslate nohighlight">\(\rightarrow\)</span>”. Berikut adalah tabel kebenaran implikasi.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>p</p></th>
+<th class="head"><p>q</p></th>
+<th class="head"><p>p<span class="math notranslate nohighlight">\(\rightarrow\)</span>q</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="biimplikasi">
+<h2>BIIMPLIKASI<a class="headerlink" href="#biimplikasi" title="Link to this heading">#</a></h2>
+<p>Biimplikasi adalah logika matematika yang ditandai dengan penggunaan kata “jika dan hanya jika”. Implikasi ganda terjadi dalam kalimat majemuk dan diwakili oleh “<span class="math notranslate nohighlight">\(\leftrightarrow\)</span>”. Bi-implikasi  benar hanya  jika dua pernyataan (p dan q) keduanya benar atau keduanya salah. Jika salah satu pernyataan salah, implikasi kondisional salah. Berikut adalah tabel kebenaran biimplikasi:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>p</p></th>
+<th class="head"><p>q</p></th>
+<th class="head"><p>p<span class="math notranslate nohighlight">\(\leftrightarrow\)</span>q</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <section id="references">
-<h2>REFERENCES<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://id.wikipedia.org/wiki/Aljabar_Boolean">https://id.wikipedia.org/wiki/Aljabar_Boolean</a></p>
-</section>
-<section id="operator-biner">
-<h2>Operator Biner<a class="headerlink" href="#operator-biner" title="Link to this heading">#</a></h2>
-<p>Operasi biner dengan himpunan adalah operasi di mana domain dan kodomain adalah himpunan yang sama. Contohnya termasuk operasi aritmetika seperti penambahan, pengurangan, dan perkalian. Contoh lain ditemukan di berbagai bidang matematika, seperti penjumlahan vektor, perkalian matriks, dan konjugasi dalam grup.</p>
-<section id="id1">
-<h3>REFERENCES<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://learn.microsoft.com/id-id/cpp/cpp/binary-operators?view=msvc-170">https://learn.microsoft.com/id-id/cpp/cpp/binary-operators?view=msvc-170</a></p>
-</section>
-</section>
-<section id="operator-uner">
-<h2>Operator Uner<a class="headerlink" href="#operator-uner" title="Link to this heading">#</a></h2>
-<p>Operasi uner adalah operasi yang hanya memiliki satu operand, yaitu satu input. Ini berbeda dengan operasi biner, yang menggunakan dua operan. Contohnya adalah fungsi:</p>
+<h3>REFERENCES:<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://id.wikipedia.org/wiki/Negasi">https://id.wikipedia.org/wiki/Negasi</a>
+<a class="reference external" href="https://www.kompas.com/skola/read/2022/06/02/145036669/negasi-konjungsi-disjungsi-implikasi-dan-biimplikasi">https://www.kompas.com/skola/read/2022/06/02/145036669/negasi-konjungsi-disjungsi-implikasi-dan-biimplikasi</a>
+Buatlah tabel kebenaran untuk~pernyataan berikut $<span class="math notranslate nohighlight">\(P\lor(R\to\ Q)\)</span>$</p>
 <div class="math notranslate nohighlight">
-\[
-f: A \to A
-\]</div>
-<p>di mana (A) adalah himpunan. Fungsi (f) adalah operasi unary pada (A).</p>
-<section id="id2">
-<h3>REFERENCES:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://id.wikipedia.org/wiki/Operasi_uner">https://id.wikipedia.org/wiki/Operasi_uner</a></p>
-</section>
-</section>
-<section id="manfaat-dalam-pemrograman-boolean">
-<h2>Manfaat dalam Pemrograman Boolean<a class="headerlink" href="#manfaat-dalam-pemrograman-boolean" title="Link to this heading">#</a></h2>
-<p>Aljabar boolean sering digunakan dalam pemrograman untuk mengevaluasi ekspresi logika.</p>
-</section>
-<section id="boolean-algebra">
-<h2>Boolean Algebra<a class="headerlink" href="#boolean-algebra" title="Link to this heading">#</a></h2>
-<p>Tabel kebenaran untuk fungsi boolean:</p>
-<div class="math notranslate nohighlight">
-\[
-f(x, y, z) = xz + y
-\]</div>
-<p>ditunjukkan di sebelah kanan. Untuk mempermudah evaluasi fungsi boolean, tabel kebenaran berisi kolom tambahan (diarsir) untuk menyimpan evaluasi dari bagian-bagian subfungsi.</p>
-<p>Sebagian besar identitas Boolean memiliki bentuk AND (perkalian) serta bentuk OR (penjumlahan).</p>
-<section id="id3">
-<h3>REFERENCES:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://byjus.com/maths/boolean-algebra/">https://byjus.com/maths/boolean-algebra/</a></p>
+\[\begin{split}\begin{array}{c|c|c|c|cc}P&amp;Q&amp;R&amp;\ Q&amp;R\to\ Q&amp;P\lor(R\to\ Q)\\\hline\text{Т}&amp;\text{Т}&amp;\text{Т}&amp;\text{F}&amp;\text{T}&amp;\text{T}\\\text{Т}&amp;\text{Т}&amp;\text{F}&amp;\text{F}&amp;\text{T}&amp;\text{T}\\\text{T}&amp;\text{F}&amp;\text{T}&amp;\text{T}&amp;\text{F}&amp;\text{T}\\\text{T}&amp;\text{F}&amp;\text{F}&amp;\text{T}&amp;\text{T}&amp;\text{T}\\\text{F}&amp;\text{T}&amp;\text{T}&amp;\text{F}&amp;\text{T}&amp;\text{T}\\\text{F}&amp;\text{T}&amp;\text{F}&amp;\text{F}&amp;\text{T}&amp;\text{T}\\\text{F}&amp;\text{F}&amp;\text{T}&amp;\text{T}&amp;\text{F}&amp;\text{F}\\\text{F}&amp;\text{F}&amp;\text{F}&amp;\text{T}&amp;\text{T}&amp;\text{T}&amp;\end{array}\end{split}\]</div>
 </section>
 </section>
 </section>
@@ -485,15 +590,6 @@ f(x, y, z) = xz + y
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="ALGORITMA.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">ALGORITMA</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
@@ -510,18 +606,12 @@ f(x, y, z) = xz + y
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">REFERENCES</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-biner">Operator Biner</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">REFERENCES</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-uner">Operator Uner</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">REFERENCES:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat-dalam-pemrograman-boolean">Manfaat dalam Pemrograman Boolean</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-algebra">Boolean Algebra</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">REFERENCES:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negasi">NEGASI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konjungsi">KONJUNGSI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disjungsi">DISJUNGSI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implikasi">IMPLIKASI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biimplikasi">BIIMPLIKASI</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">REFERENCES:</a></li>
 </ul>
 </li>
 </ul>
