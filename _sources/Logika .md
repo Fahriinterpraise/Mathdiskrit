@@ -4,7 +4,9 @@ title: 'Logika_Matematika '
 ---
 
 # LOGIKA MATEMATIKA 
-
+NAMA :Fahrizal umam
+NIM  :230411100056
+KELAS:IF2D
 ## NEGASI
 Dilansir dari Boston University, negasi adalah kalimat yanyengsesuatu yang tidak terjadi. Atau dapat disebutkan bahwa negasi adalah kebalikan dari preposisi. Negasi ditandai dengan simbol $\sim$. Jika preposisi awal p bernilai benar, maka pernyataan negasinya $\sim p$ adalah salah.
 
