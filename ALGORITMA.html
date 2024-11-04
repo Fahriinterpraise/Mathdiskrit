@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ALGORITMA';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -399,13 +401,23 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-o-algoritma">Big O algoritma</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refrences">refrences:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#komponen-big-o-notation">Komponen Big O Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-fungsi-big-o">Contoh Fungsi Big O</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pentingnya-big-o-notation">Pentingnya Big O Notation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#refrences">refrences:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-big-o-dari-algoritma-sequential-search">Hitung Big O dari algoritma Sequential Search</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#waktu-kompleksitas-time-complexity">Waktu kompleksitas (time complexity)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ruang-kompleksitas-space-komplexity">Ruang Kompleksitas (space komplexity)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references-ruang-kompleksitas-dan-aktu-kompleksitas">references Ruang Kompleksitas dan aktu kompleksitas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Cara Kerja Sequential Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-kompleksitas-waktu">Analisis Kompleksitas Waktu</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#waktu-kompleksitas-time-complexity">Waktu kompleksitas (time complexity)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ruang-kompleksitas-space-komplexity">Ruang Kompleksitas (space komplexity)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#komponen-ruang-kompleksitas">Komponen Ruang Kompleksitas</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references-ruang-kompleksitas-dan-aktu-kompleksitas">references Ruang Kompleksitas dan aktu kompleksitas</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -512,29 +524,98 @@ Dengan cara ini, binary search memungkinkan pencarian yang cepat dan efisien dal
 </section>
 <section id="big-o-algoritma">
 <h2>Big O algoritma<a class="headerlink" href="#big-o-algoritma" title="Link to this heading">#</a></h2>
-<p>Big-O , yang biasa disebut sebagai “ Orde “, adalah cara untuk menyatakan batas atas kompleksitas waktu suatu algoritma, karena ia menganalisis situasi terburuk dari algoritma tersebut. Ia memberikan batas atas waktu yang dibutuhkan oleh suatu algoritma dalam hal ukuran input. Ia dilambangkan sebagai O(f(n)) , di mana f(n) adalah fungsi yang merepresentasikan jumlah operasi (langkah) yang dilakukan suatu algoritma untuk memecahkan masalah berukuran n .</p>
+<p>Big O Notation adalah notasi matematika yang digunakan untuk menggambarkan kompleksitas algoritma dalam hal waktu (kompleksitas waktu) dan ruang (kompleksitas ruang). Notasi ini memberikan cara untuk membandingkan seberapa efisien algoritma dalam hal penggunaan sumber daya saat ukuran inputnya meningkat. Big O Notation fokus pada perilaku algoritma dalam skenario terburuk dan menggambarkan pertumbuhan fungsi yang terkait dengan waktu eksekusi atau penggunaan memori.</p>
+<section id="komponen-big-o-notation">
+<h3>Komponen Big O Notation<a class="headerlink" href="#komponen-big-o-notation" title="Link to this heading">#</a></h3>
+<p>Pertumbuhan Fungsi: Big O menggambarkan seberapa cepat waktu eksekusi atau ruang yang dibutuhkan oleh algoritma bertambah seiring bertambahnya ukuran input (n). Hal ini memungkinkan kita untuk mengabaikan konstanta dan faktor kecil, dan hanya memperhatikan aspek yang paling signifikan dari pertumbuhan.</p>
+<p>Notasi: Dalam Big O Notation, kita biasanya menggunakan huruf “O” diikuti oleh fungsi yang menunjukkan hubungan antara ukuran input dan waktu eksekusi. Contohnya, O(n), O(log n), O(n²), dan lain-lain.</p>
+</section>
+<section id="contoh-fungsi-big-o">
+<h3>Contoh Fungsi Big O<a class="headerlink" href="#contoh-fungsi-big-o" title="Link to this heading">#</a></h3>
+<p><strong>O(1):</strong> Kompleksitas konstan. Waktu eksekusi tidak tergantung pada ukuran input. Contoh: Mengakses elemen di array dengan indeks tertentu.</p>
+<p>O(log n): Kompleksitas logaritmik. Waktu eksekusi meningkat secara logaritmik seiring bertambahnya ukuran input. Contoh: Algoritma Binary Search.</p>
+<p><strong>O(n):</strong> Kompleksitas linier. Waktu eksekusi meningkat secara langsung sebanding dengan ukuran input. Contoh: Algoritma Sequential Search.</p>
+<p><strong>O(n log n):</strong> Kompleksitas n log n. Umumnya muncul dalam algoritma pengurutan efisien seperti Merge Sort dan Quick Sort.</p>
+<p><strong>O(n²):</strong> Kompleksitas kuadratik. Waktu eksekusi meningkat dengan kuadrat dari ukuran input. Contoh: Algoritma pengurutan gelembung (Bubble Sort) dan pengurutan seleksi (Selection Sort).</p>
+<p><strong>O(2^n):</strong> Kompleksitas eksponensial. Waktu eksekusi meningkat secara eksponensial seiring bertambahnya ukuran input. Contoh: Algoritma yang menyelesaikan masalah kombinatorial seperti pencarian semua subset dari himpunan.</p>
+</section>
+<section id="pentingnya-big-o-notation">
+<h3>Pentingnya Big O Notation<a class="headerlink" href="#pentingnya-big-o-notation" title="Link to this heading">#</a></h3>
+<p><strong>Perbandingan Algoritma:</strong> Dengan Big O, kita dapat membandingkan efisiensi berbagai algoritma untuk memahami mana yang lebih baik untuk digunakan dalam situasi tertentu.</p>
+<p><strong>Skalabilitas:</strong> Big O membantu dalam memahami bagaimana algoritma akan berperilaku seiring bertambahnya ukuran input, yang sangat penting dalam pengembangan perangkat lunak dan sistem besar.</p>
+<p><strong>Optimisasi:</strong> Dengan mengetahui kompleksitas suatu algoritma, kita bisa mencari cara untuk mengoptimalkan kode agar lebih efisien, baik dalam hal waktu maupun ruang.</p>
 <section id="refrences">
-<h3>refrences:<a class="headerlink" href="#refrences" title="Link to this heading">#</a></h3>
+<h4>refrences:<a class="headerlink" href="#refrences" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/">https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/</a></p>
+</section>
 </section>
 </section>
 <section id="hitung-big-o-dari-algoritma-sequential-search">
 <h2>Hitung Big O dari algoritma Sequential Search<a class="headerlink" href="#hitung-big-o-dari-algoritma-sequential-search" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Cara Kerja Sequential Search<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Algoritma Sequential Search memeriksa setiap elemen dalam array satu per satu, mulai dari elemen pertama hingga elemen terakhir, sampai elemen yang dicari ditemukan atau sampai seluruh elemen telah diperiksa.</p>
+</section>
+<section id="analisis-kompleksitas-waktu">
+<h3>Analisis Kompleksitas Waktu<a class="headerlink" href="#analisis-kompleksitas-waktu" title="Link to this heading">#</a></h3>
+<p><strong>Kasus Terburuk:</strong></p>
+<ul class="simple">
+<li><p>Dalam kasus terburuk, elemen yang dicari berada di akhir array atau tidak ada dalam array sama sekali. Dalam situasi ini, algoritma harus memeriksa setiap elemen.</p></li>
+<li><p>Jika kita memiliki array dengan n elemen, maka algoritma akan melakukan n perbandingan.</p></li>
+<li><p>Oleh karena itu, dalam kasus terburuk, kompleksitas waktu adalah:
+$<span class="math notranslate nohighlight">\(O(n)\)</span>$</p></li>
+</ul>
+<p><strong>Kasus Terbaik:</strong></p>
+<ul class="simple">
+<li><p>Dalam kasus terbaik, elemen yang dicari berada di posisi pertama dalam array.</p></li>
+<li><p>Dalam situasi ini, algoritma hanya perlu melakukan satu perbandingan.</p></li>
+<li><p>Maka kompleksitas waktu dalam kasus terbaik adalah:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[O(1)\]</div>
+<p><strong>Kasus Rata-rata:</strong></p>
+<ul class="simple">
+<li><p>Rata-rata, jika kita mengasumsikan elemen yang dicari dapat ditemukan di mana saja dalam array, maka kita dapat memperkirakan bahwa kita akan memeriksa sekitar setengah dari elemen.</p></li>
+<li><p>Maka, dalam kasus rata-rata, kompleksitas waktu adalah:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[O(n)\]</div>
 <section id="waktu-kompleksitas-time-complexity">
-<h3>Waktu kompleksitas (time complexity)<a class="headerlink" href="#waktu-kompleksitas-time-complexity" title="Link to this heading">#</a></h3>
-<p>Umumnya, selalu ada lebih dari satu cara untuk menyelesaikan masalah dalam ilmu komputer dengan algoritma yang berbeda. Oleh karena itu, sangat diperlukan untuk menggunakan suatu metode guna membandingkan solusi-solusi tersebut guna menilai mana yang lebih optimal. Metode tersebut harus:</p>
-<p>Terlepas dari mesin dan konfigurasinya, di mana algoritma tersebut berjalan.
-Menunjukkan korelasi langsung dengan jumlah masukan.
-Dapat membedakan dua algoritma dengan jelas tanpa ambiguitas.</p>
+<h4>Waktu kompleksitas (time complexity)<a class="headerlink" href="#waktu-kompleksitas-time-complexity" title="Link to this heading">#</a></h4>
+<p>Waktu Kompleksitas (Time Complexity) adalah pengukuran seberapa efisien suatu algoritma dalam hal waktu eksekusi seiring bertambahnya ukuran input. Waktu kompleksitas memberikan gambaran tentang jumlah langkah atau operasi yang diperlukan untuk menyelesaikan algoritma berdasarkan ukuran input yang diberikan. Ini sangat penting dalam analisis algoritma untuk memahami seberapa cepat atau lambat suatu algoritma akan berfungsi ketika menghadapi data yang lebih besar.</p>
+<p><strong>Komponen Waktu Kompleksitas</strong></p>
+<ul class="simple">
+<li><p><strong>Input Size (Ukuran Input):</strong> Ukuran input adalah faktor utama yang memengaruhi waktu eksekusi algoritma. Ukuran ini dapat berupa jumlah elemen dalam array, panjang string, atau dimensi struktur data lainnya.</p></li>
+<li><p><strong>Operasi Dasar:</strong> Dalam analisis waktu kompleksitas, kita sering kali fokus pada operasi dasar yang dominan dalam algoritma, seperti perbandingan, penugasan, atau akses elemen. Ini membantu menyederhanakan analisis.</p></li>
+</ul>
+<p><strong>Kasus Terburuk, Terbaik, dan Rata-rata:</strong></p>
+<ul class="simple">
+<li><p>Kasus Terburuk: Menghitung waktu eksekusi maksimum yang mungkin untuk input yang tidak menguntungkan.</p></li>
+<li><p>Kasus Terbaik: Menghitung waktu eksekusi minimum untuk input yang paling menguntungkan.</p></li>
+<li><p>Kasus Rata-rata: Menghitung waktu eksekusi untuk input yang dianggap tipikal atau umum.</p></li>
+</ul>
+<p><strong>Contoh Penggunaan Waktu Kompleksitas</strong>
+Misalkan kita memiliki algoritma pengurutan yang mengurutkan array dengan cara membandingkan setiap elemen dengan elemen lainnya. Jika algoritma ini memiliki waktu kompleksitas O(n²), maka jika kita memiliki 100 elemen dalam array, waktu eksekusi akan meningkat menjadi 10.000 operasi. Namun, jika kita menggunakan algoritma pengurutan dengan kompleksitas O(n log n), waktu eksekusi akan jauh lebih efisien, bahkan untuk jumlah elemen yang besar.</p>
 </section>
 <section id="ruang-kompleksitas-space-komplexity">
-<h3>Ruang Kompleksitas (space komplexity)<a class="headerlink" href="#ruang-kompleksitas-space-komplexity" title="Link to this heading">#</a></h3>
-<p>Kompleksitas waktu suatu algoritma mengukur jumlah waktu yang dibutuhkan oleh suatu algoritma untuk berjalan sebagai fungsi dari panjang input. Perhatikan bahwa waktu untuk berjalan adalah fungsi dari panjang input dan bukan waktu eksekusi aktual dari mesin tempat algoritma tersebut berjalan.
-Algoritma yang valid membutuhkan waktu yang terbatas untuk dieksekusi. Waktu yang dibutuhkan oleh algoritma untuk menyelesaikan masalah yang diberikan disebut kompleksitas waktu  algoritma. Kompleksitas waktu merupakan ukuran yang sangat berguna dalam analisis algoritma.</p>
+<h4>Ruang Kompleksitas (space komplexity)<a class="headerlink" href="#ruang-kompleksitas-space-komplexity" title="Link to this heading">#</a></h4>
+<p>Ruang Kompleksitas (Space Complexity) adalah pengukuran seberapa banyak ruang memori yang dibutuhkan oleh suatu algoritma untuk menyelesaikan tugasnya, seiring bertambahnya ukuran input. Ini mencakup semua jenis memori yang digunakan selama eksekusi algoritma, termasuk ruang untuk variabel, struktur data, dan ruang tambahan untuk rekursi.</p>
+</section>
+<section id="komponen-ruang-kompleksitas">
+<h4>Komponen Ruang Kompleksitas<a class="headerlink" href="#komponen-ruang-kompleksitas" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Ruang Statis: Ruang yang dibutuhkan untuk menyimpan data yang sudah didefinisikan sebelum algoritma berjalan, seperti variabel yang dideklarasikan dan struktur data yang digunakan. Ruang ini tidak tergantung pada ukuran input.</p></li>
+<li><p>Ruang Dinamis: Ruang yang dibutuhkan selama eksekusi algoritma, termasuk ruang untuk data yang dihasilkan secara dinamis, seperti alokasi memori untuk array atau objek baru yang dibuat saat algoritma berjalan.</p></li>
+<li><p>Ruang Rekursif: Jika algoritma menggunakan rekursi, ruang yang digunakan oleh setiap panggilan rekursif juga harus diperhitungkan. Setiap panggilan rekursif menambah lapisan baru ke stack memori.</p></li>
+</ul>
+<p><strong>Contoh Penggunaan Ruang Kompleksitas</strong>
+Misalkan kita memiliki algoritma yang mengurutkan array dengan menggunakan array tambahan untuk menyimpan elemen yang diurutkan. Jika kita memiliki array dengan n elemen, maka ruang kompleksitas untuk algoritma ini adalah O(n), karena kita memerlukan ruang tambahan yang sebanding dengan ukuran input.</p>
+<p>Di sisi lain, jika kita menggunakan algoritma pengurutan in-place seperti Quick Sort, ruang kompleksitasnya bisa O(log n) jika kita mempertimbangkan ruang yang digunakan oleh panggilan rekursif, atau O(1) jika kita tidak menghitung stack rekursi.</p>
 </section>
 <section id="references-ruang-kompleksitas-dan-aktu-kompleksitas">
-<h3>references Ruang Kompleksitas dan aktu kompleksitas<a class="headerlink" href="#references-ruang-kompleksitas-dan-aktu-kompleksitas" title="Link to this heading">#</a></h3>
+<h4>references Ruang Kompleksitas dan aktu kompleksitas<a class="headerlink" href="#references-ruang-kompleksitas-dan-aktu-kompleksitas" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://www.geeksforgeeks.org/time-complexity-and-space-complexity/">https://www.geeksforgeeks.org/time-complexity-and-space-complexity/</a></p>
+</section>
 </section>
 </section>
 </section>
@@ -623,13 +704,23 @@ Algoritma yang valid membutuhkan waktu yang terbatas untuk dieksekusi. Waktu yan
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-o-algoritma">Big O algoritma</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refrences">refrences:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#komponen-big-o-notation">Komponen Big O Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-fungsi-big-o">Contoh Fungsi Big O</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pentingnya-big-o-notation">Pentingnya Big O Notation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#refrences">refrences:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-big-o-dari-algoritma-sequential-search">Hitung Big O dari algoritma Sequential Search</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#waktu-kompleksitas-time-complexity">Waktu kompleksitas (time complexity)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ruang-kompleksitas-space-komplexity">Ruang Kompleksitas (space komplexity)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references-ruang-kompleksitas-dan-aktu-kompleksitas">references Ruang Kompleksitas dan aktu kompleksitas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Cara Kerja Sequential Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-kompleksitas-waktu">Analisis Kompleksitas Waktu</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#waktu-kompleksitas-time-complexity">Waktu kompleksitas (time complexity)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ruang-kompleksitas-space-komplexity">Ruang Kompleksitas (space komplexity)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#komponen-ruang-kompleksitas">Komponen Ruang Kompleksitas</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references-ruang-kompleksitas-dan-aktu-kompleksitas">references Ruang Kompleksitas dan aktu kompleksitas</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
