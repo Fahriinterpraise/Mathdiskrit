@@ -8,42 +8,108 @@ NAMA :Fahrizal umam
 NIM  :230411100056
 KELAS:IF2D
 
-Boolean adalah tipe data paling standar yang hanya menyatakan kebenaran, apakah **TRUE** (benar) atau **FALSE** (salah). Tipe data boolean disebut juga sebagai tipe data kondisi logika.
+Aljabar Boolean adalah sistem matematika yang digunakan untuk operasi logika dengan dua nilai kebenaran, yaitu benar (1) dan salah (0). Aljabar Boolean sangat penting dalam desain sirkuit digital dan komputer karena mendasari logika biner yang digunakan dalam komputasi. Beberapa operasi dasar dalam aljabar Boolean adalah:
 
-### REFERENCES
-https://id.wikipedia.org/wiki/Aljabar_Boolean
+Operasi Dasar Aljabar Boolean:
 
-## Operator Biner
-Operasi biner dengan himpunan adalah operasi di mana domain dan kodomain adalah himpunan yang sama. Contohnya termasuk operasi aritmetika seperti penambahan, pengurangan, dan perkalian. Contoh lain ditemukan di berbagai bidang matematika, seperti penjumlahan vektor, perkalian matriks, dan konjugasi dalam grup.
+1. NOT (-): Operasi negasi yang membalik nilai kebenaran.
+2. AND (∧): Operasi logika yang hanya benar jika kedua operandnya benar.
 
-### REFERENCES
-https://learn.microsoft.com/id-id/cpp/cpp/binary-operators?view=msvc-170
 
-## Operator Uner
-Operasi uner adalah operasi yang hanya memiliki satu operand, yaitu satu input. Ini berbeda dengan operasi biner, yang menggunakan dua operan. Contohnya adalah fungsi:
+Tabel kebenaran AND:
 
-$$
-f: A \to A
-$$
+\begin{array}{c|c|c}
+   A & B & A \land B \\
+   \hline
+   0 & 0 & 0 \\
+   0 & 1 & 0 \\
+   1 & 0 & 0 \\
+   1 & 1 & 1 \\
+   \end{array}
 
-di mana \(A\) adalah himpunan. Fungsi \(f\) adalah operasi unary pada \(A\).
+3. OR (∨): Operasi logika yang benar jika salah satu atau kedua operandnya benar.
+Tabel kebenaran OR:
 
-### REFERENCES:
-https://id.wikipedia.org/wiki/Operasi_uner
+\begin{array}{c|c|c}
+   A & B & A \lor B \\
+   \hline
+   0 & 0 & 0 \\
+   0 & 1 & 1 \\
+   1 & 0 & 1 \\
+   1 & 1 & 1 \\
+   \end{array}
 
-## Manfaat dalam Pemrograman Boolean
-Aljabar boolean sering digunakan dalam pemrograman untuk mengevaluasi ekspresi logika.
+4. XOR (<->): Operasi OR eksklusif yang hanya benar jika salah satu operand benar, tetapi tidak keduanya.
+Tabel kebenaran XOR:
 
-## Boolean Algebra
-Tabel kebenaran untuk fungsi boolean:
 
-$$
-f(x, y, z) = xz + y
-$$
 
-ditunjukkan di sebelah kanan. Untuk mempermudah evaluasi fungsi boolean, tabel kebenaran berisi kolom tambahan (diarsir) untuk menyimpan evaluasi dari bagian-bagian subfungsi.
+\begin{array}{c|c|c}
+   A & B & A \oplus B \\
+   \hline
+   0 & 0 & 0 \\
+   0 & 1 & 1 \\
+   1 & 0 & 1 \\
+   1 & 1 & 0 \\
+   \end{array}
 
-Sebagian besar identitas Boolean memiliki bentuk AND (perkalian) serta bentuk OR (penjumlahan).
+### Gerbang Logika
 
-### REFERENCES:
-https://byjus.com/maths/boolean-algebra/
+Gerbang logika adalah implementasi fisik dari operasi aljabar Boolean dalam sirkuit digital. Setiap gerbang logika menerima input biner (0 atau 1) dan menghasilkan output berdasarkan aturan logika tertentu.
+
+1. Gerbang NOT (Inverter):
+
+   Fungsi: Membalik nilai input.
+
+   Simbol: Segitiga dengan lingkaran kecil di      ujungnya.
+
+   Jika input = 1, maka output = 0, dan            sebaliknya.
+
+
+
+2. Gerbang AND:
+
+    Fungsi: Menghasilkan output 1 jika semua       inputnya 1.
+
+    Simbol: Bentuk setengah lingkaran dengan       dua input dan satu output.
+
+    Tabel kebenaran sama seperti operasi AND.
+
+
+
+3. Gerbang OR:
+
+    Fungsi: Menghasilkan output 1 jika salah       satu atau lebih inputnya 1.
+
+    Simbol: Bentuk seperti panah dengan dua         input dan satu output.
+
+    Tabel kebenaran sama seperti operasi OR.
+
+
+
+4. Gerbang XOR:
+
+Fungsi: Menghasilkan output 1 jika salah satu inputnya benar, tetapi tidak keduanya.
+
+Simbol: Seperti gerbang OR tetapi dengan garis tambahan di depan.
+
+Tabel kebenaran sama seperti operasi XOR.
+
+
+
+
+Penggunaan Aljabar Boolean dan Gerbang Logika
+
+Sirkuit digital seperti komputer, kalkulator, dan perangkat elektronik lainnya menggunakan kombinasi gerbang logika untuk memproses informasi biner (0 dan 1).
+
+Desain rangkaian digital menggunakan gerbang logika untuk membuat perangkat yang mampu melakukan operasi aritmatika, pengambilan keputusan, kontrol logis, dan lainnya.
+
+
+Contoh Sederhana:
+
+Jika kita memiliki dua input  dan , dengan aljabar Boolean kita bisa menulis ekspresi:
+
+yang menunjukkan bagaimana aljabar Boolean digunakan untuk menyederhanakan logika. Gerbang logika kemudian dapat digunakan untuk mengimplementasikan ekspresi ini dalam bentuk rangkaian.
+
+## REFERENCES:
+https://www.dicoding.com/blog/gerbang-logika-dan-tabel-kebenaran/
