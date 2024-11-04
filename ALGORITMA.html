@@ -183,7 +183,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Himpunan.html">HIMPUNAN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logika.html">LOGIKA MATEMATIKA</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">ALGORITMA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BOOLEAN.html">BOOLEAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BOOLEAN.html">ALJABAR_BOOLEAN</a></li>
 </ul>
 
     </div>
@@ -382,7 +382,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defisi-algoritma">Defisi ALgoritma</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referenses">Referenses:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-sequential-search">Algoritma Sequential search</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-binary-search">Algoritma Binary search</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-kerja-sequential-search">Cara Kerja Sequential Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kelebihan-sequential-search">Kelebihan Sequential Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kekurangan-sequential-search">Kekurangan Sequential Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penggunaan">Contoh Penggunaan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-binary-search">Algoritma Binary search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references-binary-search-and-sequential-search">references binary search and sequential search:</a></li>
 </ul>
 </li>
@@ -429,28 +434,64 @@ KELAS:IF2D</p>
 </section>
 <section id="algoritma-sequential-search">
 <h3>Algoritma Sequential search<a class="headerlink" href="#algoritma-sequential-search" title="Link to this heading">#</a></h3>
-<p>Pola	 Sequential	 Search	 akan	 membandingkan	 dari	 tiap-tiap	 unsurnya	 seraca	bergantuan	dan	berjenjang.	dari	unsur	awal	hingga	diselesaikan	di	unsur	paling	belakang.	 model	 Sequential	 Search	 yang	 sering	 dikatakan	 sebagai	 penelusuran	secara	 berjenjang	 yang	 bisa	diperuntukkan	 dalam	 proses	 penelusuran	 berkas	dalam	 bentuk	 array	 yang	 sudah	 dirapihak	 sesuah	 dengan	 urutan	 dari	 yang	sebelumnya	 tidak	 terurut	 hingga	 rapih.	 pola	 yang	 dipergunakan	 dalam	 model	penelusuran	ialah</p>
+<p>Algoritma Sequential Search, atau pencarian berurutan, adalah metode yang digunakan untuk mencari elemen tertentu dalam sebuah array atau daftar dengan cara memeriksa setiap elemen satu per satu dari awal hingga akhir. Ini adalah salah satu algoritma pencarian yang paling sederhana dan paling mudah diimplementasikan.</p>
+</section>
+<section id="cara-kerja-sequential-search">
+<h3>Cara Kerja Sequential Search<a class="headerlink" href="#cara-kerja-sequential-search" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Membaca	array	data.</p></li>
-<li><p>Meyakinkan	data	yang	ditelusuri.</p></li>
-<li><p>Mulai	 dari	 data	 awal	 sampai	 paling	 belakang,	 penelusuran	 dataakan	 di	perumpamakan	 dengan	 tiap-tiap	 unsur	 pa</p></li>
+<li><p>Inisialisasi: Mulai dengan elemen pertama dalam array.</p></li>
+<li><p>Perbandingan: Bandingkan elemen yang sedang diperiksa dengan nilai yang dicari (key).</p></li>
+<li><p>Temukan atau Lanjutkan:</p>
+<ul class="simple">
+<li><p>Jika elemen yang sedang diperiksa sama dengan nilai yang dicari, pencarian berhasil, dan algoritma mengembalikan indeks elemen tersebut.</p></li>
+<li><p>Jika tidak, lanjutkan ke elemen berikutnya dalam array.</p></li>
+</ul>
+</li>
+<li><p>Ulangi Proses: Ulangi langkah 2 dan 3 sampai elemen ditemukan atau sampai semua elemen dalam array telah diperiksa.</p></li>
+<li><p>Hasil Pencarian: Jika elemen tidak ditemukan setelah memeriksa seluruh array, algoritma mengembalikan informasi bahwa elemen tersebut tidak ada dalam daftar.</p></li>
 </ol>
-<p>Urutan	Algoritma	Sequential	Search</p>
-<ol class="arabic simple">
-<li><p>I	&lt;-0</p></li>
-<li><p>Ketemu	&lt;-false</p></li>
-<li><p>Selama	(tidak	ketemu)	dan	(I	&lt;	N)	kerjakan	baris</p></li>
-<li><p>Jika	(Data(i)	=	key)	maka	ketemu	&lt;-true	jika	tidak	i&lt;-i+</p></li>
-<li><p>Jika	(ketemu)	maka	I	adalah	indeks	dari	da</p></li>
-</ol>
+</section>
+<section id="kelebihan-sequential-search">
+<h3>Kelebihan Sequential Search<a class="headerlink" href="#kelebihan-sequential-search" title="Link to this heading">#</a></h3>
+<p>Sederhana: Algoritma ini mudah dipahami dan diimplementasikan, karena hanya melibatkan perulangan dan perbandingan sederhana.
+Tidak Memerlukan Pengurutan: Algoritma ini dapat digunakan pada array yang tidak terurut, sehingga tidak memerlukan langkah pengurutan sebelumnya.</p>
+</section>
+<section id="kekurangan-sequential-search">
+<h3>Kekurangan Sequential Search<a class="headerlink" href="#kekurangan-sequential-search" title="Link to this heading">#</a></h3>
+<p>Inefisien untuk Data Besar: Karena algoritma ini memeriksa setiap elemen satu per satu, waktu pencarian meningkat secara linear dengan jumlah elemen dalam array. Kompleksitas waktu adalah O(n), di mana n adalah jumlah elemen dalam array. Ini membuatnya tidak efisien untuk dataset besar.
+Waktu Terburuk: Dalam kasus terburuk, algoritma ini harus memeriksa setiap elemen dalam array, yang dapat memakan waktu cukup lama jika array sangat besar.</p>
+</section>
+<section id="contoh-penggunaan">
+<h3>Contoh Penggunaan:<a class="headerlink" href="#contoh-penggunaan" title="Link to this heading">#</a></h3>
+<p>Misalkan kita memiliki array berikut: [3, 5, 2, 8, 6], dan kita ingin mencari angka 8.</p>
+<p>Algoritma Sequential Search akan memeriksa elemen satu per satu:
+Memeriksa 3, tidak cocok.
+Memeriksa 5, tidak cocok.
+Memeriksa 2, tidak cocok.
+Memeriksa 8, cocok! Elemen ditemukan.</p>
 </section>
 <section id="algoritma-binary-search">
 <h3>Algoritma Binary search<a class="headerlink" href="#algoritma-binary-search" title="Link to this heading">#</a></h3>
-<p>pola	 instruksi binary	 search	 ini	 bisa	 dikenal	 dengan	 nama	 lain	 dicotomic	search.	bermula	dari	membandikan	value	yang	akan	di	telusuri,x,	dengan	unsur	dibagian	tengah	array.	dimana	disaar	x	mepunyai	poin	lebih	banyak	dari	unsur	array	 ditengan,	 jadi	 tiap	 unsur	 array	 disusun	 membesar,	 maka	 penelusuran	dilakukan	pada	paruh	waktu	yang	mempunyai	poinlebih	besar	dari	x	hingga	unsur	selesai,	 dengan	 menggunakan	 cara	 yang	 mirip.	 agar	 lebih	 mudah,	 diutarakandengan	 dengan	 gambar	 kasus.	 ditemukan	 sebuah	table	 yang	 memiliki	 poin	 int	TabInt[1..n],	 yang	 sudah	 dimuat	 .,	 dan	 disusun	 membesar.	 tuliskan	 program	dengan	 menggunakan	 bantuan	 function	 yang	 jika	 ditetapkan	 poin	 x	 bernilai	integer,maka	 akan	 dicari	 apakah	harga	 x	 ada	 dalam	 TabInt	 secara	 dicotomik,	dengan	rulesberikut:perumpamaanx	dengan	velue	unsurtengah.</p>
-<p>a.Apabila	serupaberarti	x	ditemukan	dalam	tabel.	
-b.Apabilax	&lt;,	penelusurandilakukan	pada	unsurbagian	bawah	dengan	proses	yangserupa.
-c.Apabilax	&gt;,	penelusuran	 dimulai	pada	unsur	bagian	 atas	 dengan	 cara	 yangserupa.	Penelusuran	akan	menghasilkan	sebuah	boolean	ditemukan	yang	valuetrueapabila	x	 ditemukan,	 dan	 false	apabilax	 tidakditemukan	 serta	 indeks	tempat	x	ditemukan.Penelusurandistopsetelah	valueawal	ditemukan.</p>
-<p>Pola	instruksi ini	bekerja	dengan	cara	memilih	record	dengan	indeks	tengah	dari	tabledan	menhumpamakannya	dengan	record	yang	hendak	ditelusuri.	apabilarecord	tersebut	lebih	rendah	atau	lebih	tinggi,	maka	tabletersebut	dibagi	dua	dan	bagian	tabel	yang	bersesuaian	akan	diproses	kembali	secara	rekursif</p>
+<p>Binary Search adalah algoritma pencarian yang efisien untuk menemukan posisi elemen dalam array yang sudah terurut. Algoritma ini bekerja dengan membagi array menjadi dua bagian secara berulang hingga elemen yang dicari ditemukan atau interval pencarian menjadi kosong.</p>
+<p>Cara Kerja:
+Inisialisasi: Tentukan indeks awal (low) dan indeks akhir (high) dari array.
+Iterasi:
+Hitung indeks tengah (mid) dari array.
+Bandingkan elemen di indeks tengah dengan elemen yang dicari (key).
+Jika elemen tengah sama dengan key, pencarian selesai.
+Jika key lebih kecil dari elemen tengah, ulangi pencarian pada bagian kiri.
+Jika key lebih besar, ulangi pada bagian kanan.
+Ulangi hingga elemen ditemukan atau interval pencarian menjadi kosong.
+Keuntungan:
+Waktu Eksekusi: O(log n), sehingga lebih cepat dibandingkan pencarian linier (O(n)) pada array besar.</p>
+</section>
+<section id="contoh">
+<h3>Contoh:<a class="headerlink" href="#contoh" title="Link to this heading">#</a></h3>
+<p>Jika kita memiliki array terurut [2, 3, 5, 7, 11, 13, 17] dan ingin mencari angka 11, binary search akan:</p>
+<p>Memeriksa elemen tengah (7), tidak cocok.
+Melihat ke kanan (pencarian berikutnya pada [11, 13, 17]), memeriksa elemen tengah (13), tidak cocok.
+Kembali ke kiri (pencarian berikutnya pada [11]), menemukan 11.
+Dengan cara ini, binary search memungkinkan pencarian yang cepat dan efisien dalam data yang terurut.</p>
 <section id="references-binary-search-and-sequential-search">
 <h4>references binary search and sequential search:<a class="headerlink" href="#references-binary-search-and-sequential-search" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="http://klik.ulm.ac.id/index.php/klik/article/view/519/pdf">http://klik.ulm.ac.id/index.php/klik/article/view/519/pdf</a></p>
@@ -565,7 +606,12 @@ Algoritma yang valid membutuhkan waktu yang terbatas untuk dieksekusi. Waktu yan
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defisi-algoritma">Defisi ALgoritma</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referenses">Referenses:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-sequential-search">Algoritma Sequential search</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-binary-search">Algoritma Binary search</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cara-kerja-sequential-search">Cara Kerja Sequential Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kelebihan-sequential-search">Kelebihan Sequential Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kekurangan-sequential-search">Kekurangan Sequential Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penggunaan">Contoh Penggunaan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-binary-search">Algoritma Binary search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#references-binary-search-and-sequential-search">references binary search and sequential search:</a></li>
 </ul>
 </li>

@@ -16,26 +16,56 @@ Perkembangan ilmu pengetahuan dan teknologi menjadikan manusia mampu menghasilka
 #### Referenses:
 https://bdkm.unida.ac.id/artikel/pengertian-algoritma.html
 ### Algoritma Sequential search
-Pola	 Sequential	 Search	 akan	 membandingkan	 dari	 tiap-tiap	 unsurnya	 seraca	bergantuan	dan	berjenjang.	dari	unsur	awal	hingga	diselesaikan	di	unsur	paling	belakang.	 model	 Sequential	 Search	 yang	 sering	 dikatakan	 sebagai	 penelusuran	secara	 berjenjang	 yang	 bisa	diperuntukkan	 dalam	 proses	 penelusuran	 berkas	dalam	 bentuk	 array	 yang	 sudah	 dirapihak	 sesuah	 dengan	 urutan	 dari	 yang	sebelumnya	 tidak	 terurut	 hingga	 rapih.	 pola	 yang	 dipergunakan	 dalam	 model	penelusuran	ialah
+Algoritma Sequential Search, atau pencarian berurutan, adalah metode yang digunakan untuk mencari elemen tertentu dalam sebuah array atau daftar dengan cara memeriksa setiap elemen satu per satu dari awal hingga akhir. Ini adalah salah satu algoritma pencarian yang paling sederhana dan paling mudah diimplementasikan.
 
-1. Membaca	array	data.
-2. Meyakinkan	data	yang	ditelusuri.
-3. Mulai	 dari	 data	 awal	 sampai	 paling	 belakang,	 penelusuran	 dataakan	 di	perumpamakan	 dengan	 tiap-tiap	 unsur	 pa
+### Cara Kerja Sequential Search
+1. Inisialisasi: Mulai dengan elemen pertama dalam array.
+2. Perbandingan: Bandingkan elemen yang sedang diperiksa dengan nilai yang dicari (key).
+3. Temukan atau Lanjutkan:
+    * Jika elemen yang sedang diperiksa sama dengan nilai yang dicari, pencarian berhasil, dan algoritma mengembalikan indeks elemen tersebut.
+    * Jika tidak, lanjutkan ke elemen berikutnya dalam array.
 
-Urutan	Algoritma	Sequential	Search
-1. I	<-0
-2. Ketemu	<-false
-3. Selama	(tidak	ketemu)	dan	(I	<	N)	kerjakan	baris
-4. Jika	(Data(i)	=	key)	maka	ketemu	<-true	jika	tidak	i<-i+
-5. Jika	(ketemu)	maka	I	adalah	indeks	dari	da
+4. Ulangi Proses: Ulangi langkah 2 dan 3 sampai elemen ditemukan atau sampai semua elemen dalam array telah diperiksa.
+5. Hasil Pencarian: Jika elemen tidak ditemukan setelah memeriksa seluruh array, algoritma mengembalikan informasi bahwa elemen tersebut tidak ada dalam daftar.
+
+### Kelebihan Sequential Search
+Sederhana: Algoritma ini mudah dipahami dan diimplementasikan, karena hanya melibatkan perulangan dan perbandingan sederhana.
+Tidak Memerlukan Pengurutan: Algoritma ini dapat digunakan pada array yang tidak terurut, sehingga tidak memerlukan langkah pengurutan sebelumnya.
+
+### Kekurangan Sequential Search
+Inefisien untuk Data Besar: Karena algoritma ini memeriksa setiap elemen satu per satu, waktu pencarian meningkat secara linear dengan jumlah elemen dalam array. Kompleksitas waktu adalah O(n), di mana n adalah jumlah elemen dalam array. Ini membuatnya tidak efisien untuk dataset besar.
+Waktu Terburuk: Dalam kasus terburuk, algoritma ini harus memeriksa setiap elemen dalam array, yang dapat memakan waktu cukup lama jika array sangat besar.
+
+### Contoh Penggunaan:
+Misalkan kita memiliki array berikut: [3, 5, 2, 8, 6], dan kita ingin mencari angka 8.
+
+Algoritma Sequential Search akan memeriksa elemen satu per satu:
+Memeriksa 3, tidak cocok.
+Memeriksa 5, tidak cocok.
+Memeriksa 2, tidak cocok.
+Memeriksa 8, cocok! Elemen ditemukan.
 ### Algoritma Binary search
-pola	 instruksi binary	 search	 ini	 bisa	 dikenal	 dengan	 nama	 lain	 dicotomic	search.	bermula	dari	membandikan	value	yang	akan	di	telusuri,x,	dengan	unsur	dibagian	tengah	array.	dimana	disaar	x	mepunyai	poin	lebih	banyak	dari	unsur	array	 ditengan,	 jadi	 tiap	 unsur	 array	 disusun	 membesar,	 maka	 penelusuran	dilakukan	pada	paruh	waktu	yang	mempunyai	poinlebih	besar	dari	x	hingga	unsur	selesai,	 dengan	 menggunakan	 cara	 yang	 mirip.	 agar	 lebih	 mudah,	 diutarakandengan	 dengan	 gambar	 kasus.	 ditemukan	 sebuah	table	 yang	 memiliki	 poin	 int	TabInt[1..n],	 yang	 sudah	 dimuat	 .,	 dan	 disusun	 membesar.	 tuliskan	 program	dengan	 menggunakan	 bantuan	 function	 yang	 jika	 ditetapkan	 poin	 x	 bernilai	integer,maka	 akan	 dicari	 apakah	harga	 x	 ada	 dalam	 TabInt	 secara	 dicotomik,	dengan	rulesberikut:perumpamaanx	dengan	velue	unsurtengah.
+Binary Search adalah algoritma pencarian yang efisien untuk menemukan posisi elemen dalam array yang sudah terurut. Algoritma ini bekerja dengan membagi array menjadi dua bagian secara berulang hingga elemen yang dicari ditemukan atau interval pencarian menjadi kosong.
 
-a.Apabila	serupaberarti	x	ditemukan	dalam	tabel.	
-b.Apabilax	<,	penelusurandilakukan	pada	unsurbagian	bawah	dengan	proses	yangserupa.
-c.Apabilax	>,	penelusuran	 dimulai	pada	unsur	bagian	 atas	 dengan	 cara	 yangserupa.	Penelusuran	akan	menghasilkan	sebuah	boolean	ditemukan	yang	valuetrueapabila	x	 ditemukan,	 dan	 false	apabilax	 tidakditemukan	 serta	 indeks	tempat	x	ditemukan.Penelusurandistopsetelah	valueawal	ditemukan.
+Cara Kerja:
+Inisialisasi: Tentukan indeks awal (low) dan indeks akhir (high) dari array.
+Iterasi:
+Hitung indeks tengah (mid) dari array.
+Bandingkan elemen di indeks tengah dengan elemen yang dicari (key).
+Jika elemen tengah sama dengan key, pencarian selesai.
+Jika key lebih kecil dari elemen tengah, ulangi pencarian pada bagian kiri.
+Jika key lebih besar, ulangi pada bagian kanan.
+Ulangi hingga elemen ditemukan atau interval pencarian menjadi kosong.
+Keuntungan:
+Waktu Eksekusi: O(log n), sehingga lebih cepat dibandingkan pencarian linier (O(n)) pada array besar.
 
-Pola	instruksi ini	bekerja	dengan	cara	memilih	record	dengan	indeks	tengah	dari	tabledan	menhumpamakannya	dengan	record	yang	hendak	ditelusuri.	apabilarecord	tersebut	lebih	rendah	atau	lebih	tinggi,	maka	tabletersebut	dibagi	dua	dan	bagian	tabel	yang	bersesuaian	akan	diproses	kembali	secara	rekursif
+### Contoh:
+Jika kita memiliki array terurut [2, 3, 5, 7, 11, 13, 17] dan ingin mencari angka 11, binary search akan:
+
+Memeriksa elemen tengah (7), tidak cocok.
+Melihat ke kanan (pencarian berikutnya pada [11, 13, 17]), memeriksa elemen tengah (13), tidak cocok.
+Kembali ke kiri (pencarian berikutnya pada [11]), menemukan 11.
+Dengan cara ini, binary search memungkinkan pencarian yang cepat dan efisien dalam data yang terurut.
 
 #### references binary search and sequential search:
 http://klik.ulm.ac.id/index.php/klik/article/view/519/pdf
