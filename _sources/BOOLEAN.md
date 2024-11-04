@@ -17,95 +17,72 @@ Operasi OR menghasilkan output 1 jika salah satu atau kedua operandnya adalah 1.
 XOR (Exclusive OR) adalah operasi yang menghasilkan output 1 hanya jika salah satu operand adalah 1, tetapi tidak keduanya. Ini diwakili dengan tanda "".
 
 % Tabel Kebenaran NOT
-\[
-\begin{array}{c|c}
-A & \neg A \\
-\hline
-0 & 1 \\
-1 & 0 \\
-\end{array}
-\]
+| A | NOT A (¬A) |
+|---|------------|
+| 0 | 1          |
+| 1 | 0          |
+
 
 % Tabel Kebenaran AND
-\[
-\begin{array}{c|c|c}
-A & B & A \land B \\
-\hline
-0 & 0 & 0 \\
-0 & 1 & 0 \\
-1 & 0 & 0 \\
-1 & 1 & 1 \\
-\end{array}
-\]
+| A | B | A AND B (A ∧ B) |
+|---|---|------------------|
+| 0 | 0 | 0               |
+| 0 | 1 | 0               |
+| 1 | 0 | 0               |
+| 1 | 1 | 1               |
+
 
 % Tabel Kebenaran OR
-\[
-\begin{array}{c|c|c}
-A & B & A \lor B \\
-\hline
-0 & 0 & 0 \\
-0 & 1 & 1 \\
-1 & 0 & 1 \\
-1 & 1 & 1 \\
-\end{array}
-\]
+| A | B | A OR B (A ∨ B) |
+|---|---|-----------------|
+| 0 | 0 | 0              |
+| 0 | 1 | 1              |
+| 1 | 0 | 1              |
+| 1 | 1 | 1              |
+
 
 % Tabel Kebenaran XOR
-\[
-\begin{array}{c|c|c}
-A & B & A \oplus B \\
-\hline
-0 & 0 & 0 \\
-0 & 1 & 1 \\
-1 & 0 & 1 \\
-1 & 1 & 0 \\
-\end{array}
-\]
+| A | B | A XOR B (A ⊕ B) |
+|---|---|------------------|
+| 0 | 0 | 0               |
+| 0 | 1 | 1               |
+| 1 | 0 | 1               |
+| 1 | 1 | 0               |
+
 
 ## % Tabel Kebenaran Gerbang Logika
 
-% Gerbang NOT
-\[
-\begin{array}{c|c}
-A & \text{Output} \\
-\hline
-0 & 1 \\
-1 & 0 \\
-\end{array}
-\]
+| A | Output |
+|---|--------|
+| 0 | 1      |
+| 1 | 0      |
+
 
 % Gerbang AND
-\[
-\begin{array}{c|c|c}
-A & B & \text{Output} \\
-\hline
-0 & 0 & 0 \\
-0 & 1 & 0 \\
-1 & 0 & 0 \\
-1 & 1 & 1 \\
-\end{array}
-\]
+| A | B | Output |
+|---|---|--------|
+| 0 | 0 | 0      |
+| 0 | 1 | 0      |
+| 1 | 0 | 0      |
+| 1 | 1 | 1      |
+
 
 % Gerbang OR
-\[
-\begin{array}{c|c|c}
-A & B & \text{Output} \\
-\hline
-0 & 0 & 0 \\
-0 & 1 & 1 \\
-1 & 0 & 1 \\
-1 & 1 & 1 \\
-\end{array}
-\]
+| A | B | Output |
+|---|---|--------|
+| 0 | 0 | 0      |
+| 0 | 1 | 1      |
+| 1 | 0 | 1      |
+| 1 | 1 | 1      |
+
 
 % Gerbang XOR
-\[
-\begin{array}{c|c|c}
-A & B & \text{Output} \\
-\hline
-0 & 0 & 0 \\
-0 & 1 & 1 \\
-1 & 0 & 1 \\
-1 & 1 & 0 \\
-\end{array}
-\]
+| A | B | Output |
+|---|---|--------|
+| 0 | 0 | 0      |
+| 0 | 1 | 1      |
+| 1 | 0 | 1      |
+| 1 | 1 | 0      |
+
+### REFERENCES 
+https://www.dicoding.com/blog/gerbang-logika-dan-tabel-kebenaran/
