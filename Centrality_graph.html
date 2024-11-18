@@ -6,8 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Matematika Diskret</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Centrality graph &#8212; Matematika Diskret</title>
   
   
   
@@ -56,9 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
-    <link rel="index" title="Index" href="#" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Centrality_graph';</script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ALJABAR_BOOLEAN" href="BOOLEAN.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,12 +180,12 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Himpunan.html">HIMPUNAN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logika.html">LOGIKA MATEMATIKA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ALGORITMA.html">ALGORITMA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BOOLEAN.html">ALJABAR_BOOLEAN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Centrality_graph.html">Centrality graph</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Centrality graph</a></li>
 </ul>
 
     </div>
@@ -255,7 +257,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FCentrality_graph.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -267,6 +269,54 @@
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Centrality_graph.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -308,7 +358,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -319,11 +371,26 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>Centrality graph</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-network-analysis">Social Network Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">Degree Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closeness-centrality">Closeness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betweenness-centrality">Betweenness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvector-centrality">eigenvector centrality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referemces">referemces:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -333,13 +400,83 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
+  <section class="tex2jax_ignore mathjax_ignore" id="centrality-graph">
+<h1>Centrality graph<a class="headerlink" href="#centrality-graph" title="Link to this heading">#</a></h1>
+<section id="social-network-analysis">
+<h2>Social Network Analysis<a class="headerlink" href="#social-network-analysis" title="Link to this heading">#</a></h2>
+<p>merupakan bidang kajian yang mengekplorasitentang hubungan manusia dengan menggunakan teori graf. Implementasi Social Network Analysis dapat menjelaskan relasi atau hubungan antar aktor melalui visualisasi berbentuk graf. Relasi dalam analisis jaringan sosial dapat diproses dalam bentuk perhitungan yang disebut centrality dalam sebuah jaringan sosial sesuai dengan posisi masing-masing aktor di dalam struktur jaringan tersebut</p>
+<p>Tidak semua node dalam jaringan adalah penting  (aktor)
+Mencari node yang paling penting dalam suatu jaringan
+Centrality adalah penentuan aktor menggunakan ukuran pada Social Network Centrality dalam teori graf dan social network .Dibagi menjadi empat jenis,</p>
+<ul class="simple">
+<li><p>degree centrality,</p></li>
+<li><p>betweeness centrality,</p></li>
+<li><p>closeness centrality</p></li>
+<li><p>eigenvector centrality</p></li>
+</ul>
+</section>
+<section id="degree-centrality">
+<h2>Degree Centrality<a class="headerlink" href="#degree-centrality" title="Link to this heading">#</a></h2>
+<p>Degree centrality adalah jumlah edge yang terkoneksi pada suatu node yang mewakili interaksi.
+Pentingnya node ditentukan oleh jumlah node yang berdekatan dengan node tersebut
+Lebih besar derajatnya (degree), maka lebih penting node itu dalam suatu jaringan
+Hanya sebagian kecil node yang memiliki derajat tinggi dalam jaringan</p>
+<p>Degree Centrality</p>
+<p><span class="math notranslate nohighlight">\(C_D\left(v_i\right)=d_i=\sum_i A_{i j}\)</span></p>
+<p>Normalisasi  Degree Centrality:</p>
+<p><span class="math notranslate nohighlight">\(C_D^{\prime}\left(v_i\right)=d_i /(n-1)\)</span></p>
+</section>
+<section id="closeness-centrality">
+<h2>Closeness Centrality<a class="headerlink" href="#closeness-centrality" title="Link to this heading">#</a></h2>
+<p>Closenes centrality adalah nilai kedekatan antara satu node dengan node lain dalam jaringan dengan menghitung rata-rata dari jarak relasi node-node tersebut. Skor closeness centrality mewakili kecepatan dalam penyebaran informasi.</p>
+<p>Average Distance:</p>
+<p><span class="math notranslate nohighlight">\(D_{\text {avg }}\left(v_i\right)=\frac{1}{n-1} \sum_{j \neq i}^n g\left(v_i, v_j\right)\)</span></p>
+<p>Closeness Centrality</p>
+<p><span class="math notranslate nohighlight">\(C_C\left(v_i\right)=\left[\frac{1}{n-1} \sum_{j \neq i}^n g\left(v_i, v_j\right)\right]^{-1}=\frac{n-1}{\sum_{j \neq i}^n g\left(v_i, v_0\right)}\)</span></p>
+</section>
+<section id="betweenness-centrality">
+<h2>Betweenness Centrality<a class="headerlink" href="#betweenness-centrality" title="Link to this heading">#</a></h2>
+<p>Skor betweeness Centrality mewakili seberapa besar informasi yang tersebar dari suatu aktor. Semakin besar skor, artinya aktor tersebut semakin berperan dalam penyebaran informasi</p>
+<p>Semakin banyak lintasan yang harus melewati persimpangan itu (misal tidak ada jalan alternatif), maka semakin penting arti persimpangan tersebut. Hal ini menandakan seberapa besar suatu node diperlukan sebagai penghubung dalam penyebaran informasi di dalam jaringan</p>
+<p>Ukuran ini juga dapat digunakan untuk mengidentifikasi boundary spanners, yaitu orang atau node yang berperan sebagai penghubung (jembatan) antara dua komunitas</p>
+<ul class="simple">
+<li><p>Menghitung jumlah lintasan terpendek yang melewati suatu node</p></li>
+<li><p>Node dengan  betweenness  tinggi  adalah  penting dalam komunikasi dan penyebaran informasi</p></li>
+<li><p>Betweenness Centrality</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(C_B\left(v_i\right)=\sum_{v_s \neq v_i \neq v_t \in V, s&lt;t} \frac{\sigma_{s t}\left(v_i\right)}{\sigma_{s t}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sigma_{s t}\)</span> Jumlah lintasan terpendek antara  s dan t</p>
+<p><span class="math notranslate nohighlight">\(\sigma_{s t}\left(v_i\right)\)</span> Jumlah lintasan terpendek antara s dan t yang melewati vi</p>
+</section>
+<section id="eigenvector-centrality">
+<h2>eigenvector centrality<a class="headerlink" href="#eigenvector-centrality" title="Link to this heading">#</a></h2>
+<p>adalah ukuran yang lebih canggih dalam analisis jaringan dibandingkan degree centrality. Ini mengukur pengaruh suatu simpul (node) dalam jaringan, dengan mempertimbangkan bahwa tidak semua koneksi memiliki bobot yang sama. Dalam konteks ini, simpul yang terhubung ke simpul-simpul lain yang juga berpengaruh akan memiliki eigenvector centrality yang lebih tinggi.</p>
+<section id="referemces">
+<h3>referemces:<a class="headerlink" href="#referemces" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Centrality">https://en.wikipedia.org/wiki/Centrality</a></p>
+</section>
+</section>
+</section>
 
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
-</div>
-
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -351,12 +488,43 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="BOOLEAN.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ALJABAR_BOOLEAN</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#social-network-analysis">Social Network Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">Degree Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closeness-centrality">Closeness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betweenness-centrality">Betweenness Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvector-centrality">eigenvector centrality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#referemces">referemces:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
