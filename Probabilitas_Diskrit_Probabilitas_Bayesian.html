@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ALJABAR_BOOLEAN &#8212; Matematika Diskret</title>
+    <title>Naive Bayes &#8212; Matematika Diskret</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'BOOLEAN';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Probabilitas_Diskrit_Probabilitas_Bayesian';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="ALGORITMA" href="ALGORITMA.html" />
+    <link rel="prev" title="Deretan_Dan_Rekursif" href="DERETAN_DAN_REKURSIF.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,9 +184,11 @@
 <li class="toctree-l1"><a class="reference internal" href="Himpunan.html">HIMPUNAN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logika.html">LOGIKA MATEMATIKA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ALGORITMA.html">ALGORITMA</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">ALJABAR_BOOLEAN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Centrality_graph.html">CENTRALITY_GRAPH</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DERETAN_DAN_REKURSIF.html">DERETAN_DAN_REKURSIF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BOOLEAN.html">ALJABAR_BOOLEAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Centrality_graph.html">Centrality graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DERETAN_DAN_REKURSIF.html">Deretan_Dan_Rekursif</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Naive Bayes</a></li>
+
 </ul>
 
     </div>
@@ -258,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FBOOLEAN.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FProbabilitas_Diskrit_Probabilitas_Bayesian.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +290,7 @@
       
       
       
-      <li><a href="_sources/BOOLEAN.md" target="_blank"
+      <li><a href="_sources/Probabilitas_Diskrit_Probabilitas_Bayesian.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -372,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>ALJABAR_BOOLEAN</h1>
+    <h1>Naive Bayes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,16 +384,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-not">Operasi NOT</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-and">Operasi AND</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-or">Operasi OR</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-xor">Operasi XOR</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabel-kebenaran-gerbang-logika">% Tabel Kebenaran Gerbang Logika</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan">Ringkasan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">REFERENCES</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Naive Bayes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-bayes">Teorema Bayes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">references</a></li>
 </ul>
 </li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -402,234 +401,134 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="aljabar-boolean">
-<h1>ALJABAR_BOOLEAN<a class="headerlink" href="#aljabar-boolean" title="Link to this heading">#</a></h1>
-<p>Boolean adalah istilah yang berasal dari nama matematikawan dan logikawan George Boole, yang dikenal karena kontribusinya dalam logika dan aljabar. Dalam konteks ilmu komputer dan matematika, Boolean merujuk pada jenis data atau logika yang memiliki dua nilai:</p>
-<p>Benar (True): Biasanya dilambangkan dengan angka 1.
-Salah (False): Biasanya dilambangkan dengan angka 0.</p>
-<section id="operasi-not">
-<h2>Operasi NOT<a class="headerlink" href="#operasi-not" title="Link to this heading">#</a></h2>
-<p>Operasi NOT (juga disebut negasi) adalah operasi yang membalikkan nilai input. Jika input adalah 1, maka output adalah 0, dan sebaliknya. Ini adalah operasi satu variabel dengan simbol “<span class="math notranslate nohighlight">\(\lnot\)</span>”.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="naive-bayes">
+<h1>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Link to this heading">#</a></h1>
+<p>Naive Bayes adalah salah satu dari banyak model pengklasifikasi yang ada. Model ini pada dasarnya didasarkan pada Teorema Bayes dan menggunakan asumsi “naif” bahwa semua fitur bersifat independen.</p>
+<p>X₁ (Suhu) dan X₂ (Angin). Fitur X₁ dapat mengasumsikan tiga nilai diskret (rendah, sedang, tinggi), sementara fitur X₂ dapat mengasumsikan tiga nilai diskret yang berbeda (lemah, normal, kuat). Untuk menyederhanakannya, kita akan menggunakan X₁ sebagai singkatan untuk Suhu, dan X₂ untuk Angin. Target Pantai kita akan disingkat menjadi B.</p>
+<p>Tabel di bawah ini berisi beberapa catatan fitur X₁ , X₂ , dan target B. Yang terakhir dapat mengasumsikan nilai Boolean benar (pergi ke pantai) atau salah (jangan pergi ke pantai).</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{|c|c|c|}
+\hline \text { Temperature ( } X_1 \text { ) } &amp; \text { Wind }\left(X_2\right) &amp; \text { Beach (B) } \\
+\hline \text { low (L) } &amp; \text { weak (W) } &amp; \text { true (T) } \\
+\text { high (H) } &amp; \text { weak (W) } &amp; \text { false (F) } \\
+\text { medium (M) } &amp; \text { strong (S) } &amp; \text { false (F) } \\
+\text { low (L) } &amp; \text { normal (N) } &amp; \text { true (T) } \\
+\text { medium (M) } &amp; \text { normal (N) } &amp; \text { true (T) } \\
+\hline
+\end{array}
+\end{split}\]</div>
+<p>dengan mempertimbangkan sepasang fitur baru (X₁, X₂) , menentukan target B ( benar atau salah ). Tentu saja contoh ini sangat disederhanakan, demi penjelasan. Jadi, kami akan berasumsi bahwa sepasang fitur baru tersebut belum direkam.</p>
+<p>Secara sederhana, kita dapat mengatakan: jika suhu sedang (tidak tinggi, tidak rendah) dan angin lemah, haruskah kita pergi ke pantai atau tidak? Kita juga berasumsi bahwa kita memiliki skala sendiri untuk suhu dan angin, sehingga kita tahu persis apa arti masing-masing status tersebut.</p>
+<p>Secara Matematika, kita mencari probabilitas tertinggi diantara dua hal berikut: probabilitas bahwa Pantai = benar , dengan asumsi bahwa Suhu = sedang &amp; Angin = lemah ,</p>
+<div class="math notranslate nohighlight">
+\[
+P\left(B=\mathrm{T} \mid X_1=\mathrm{M}, X_2=\mathrm{W}\right)
+\]</div>
+<p>dan kemungkinan bahwa Pantai <span class="math notranslate nohighlight">\(=\)</span> salah, mengingat Suhu <span class="math notranslate nohighlight">\(=\)</span> sedang &amp; Angin <span class="math notranslate nohighlight">\(=\)</span> lemah,
+$<span class="math notranslate nohighlight">\(
+P\left(B=\mathbf{F} \mid X_1=\mathrm{M}, X_2=\mathrm{W}\right)
+\)</span>$</p>
+<p>Mana pun yang lebih besar akan secara otomatis memberi kita jawaban atas pertanyaan tersebut. Perhatikan bahwa model ini murni berdasarkan probabilitas.</p>
+<p>Bagaimana kemungkinan/probabilitas usia paruh baya tekanan darah sangat tinggi kemungkinan penyakit Hipertensi (H) atau Tidak (T)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{llll}
+\text { No } &amp; \text { Usia } &amp; \text { Tekanan Darah } &amp; \text { Penyakit (H/T) } \\
+\hline 1 &amp; \text { Muda } &amp; \text { Normal } &amp; \text { T } \\
+2 &amp; \text { Muda } &amp; \text { Tinggi } &amp; \text { T } \\
+3 &amp; \text { Paruh baya } &amp; \text { Normal } &amp; \text { T } \\
+4 &amp; \text { Paruh baya } &amp; \text { Tinggi } &amp; \text { H } \\
+5 &amp; \text { Tua } &amp; \text { Normal } &amp; \text { H } \\
+6 &amp; \text { Tua } &amp; \text { Sangat Tinggi } &amp; \text { H } \\
+7 &amp; \text { Muda } &amp; \text { Normal } &amp; \text { T } \\
+8 &amp; \text { Tua } &amp; \text { Tinggi } &amp; \text { H }
+\end{array}
+\end{split}\]</div>
+<ul>
+<li><p>Hitunglah probabilitas Hipertensi terhadap usia paruh baya tekanan darah sangat tinggi</p></li>
+<li><p>Hitunglah probabilitas Tidak  Hipertensi terhadap usia paruh baya tekanan darah sangat tinggi</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    P(H|\text{Paruh Baya, Sangat Tinggi}) = 
+    \begin{array}{c}
+        \displaystyle P(\text{Paruh Baya, Sangat Tinggi}|H) \cdot P(H) \\ 
+        \hline 
+        \displaystyle P(\text{Paruh Baya, Sangat Tinggi})
+    \end{array}
+    \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    P(T|\text{Paruh Baya, Sangat Tinggi}) = 
+    \begin{array}{c}
+        \displaystyle P(\text{Paruh Baya, Sangat Tinggi}|T) \cdot P(T) \\ 
+        \hline 
+        \displaystyle P(\text{Paruh Baya, Sangat Tinggi})
+    \end{array}
+    \end{split}\]</div>
+</li>
+</ul>
+<p>Hitung Probabilitas Prior:</p>
+<ul class="simple">
+<li><p>P(H): Proporsi data dengan penyakit H</p></li>
+<li><p>P(T): Proporsi data dengan penyakit T</p></li>
+</ul>
+<p>Hitung Likelihood:</p>
+<ul class="simple">
+<li><p>(Paruh Baya,Sangat Tinggi∣H): Kemungkinan bahwa seseorang yang memiliki
+𝐻 H berusia “paruh baya” dengan tekanan darah “sangat tinggi”.</p></li>
+<li><p>P(Paruh Baya,Sangat Tinggi∣ T): Kemungkinan bahwa seseorang yang tidak memiliki 𝐻
+H (atau 𝑇) berusia “paruh baya” dengan tekanan darah “sangat tinggi”.</p></li>
+</ul>
+<p>Hitung Evidence:</p>
+<ul class="simple">
+<li><p>P(Paruh Baya,Sangat Tinggi): Proporsi keseluruhan data yang memiliki usia “paruh baya” dan tekanan darah “sangat tinggi”.</p></li>
+</ul>
+<p>Prior Probabilities:</p>
+<ul>
+<li><p>Total data 𝑛=8</p></li>
+<li><div class="math notranslate nohighlight">
+\[ \begin{array}
+    \item Data (H = 4), sehingga (P(H) = \frac{4}{8} = 0.5).\end{array}\]</div>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \begin{array}  
+    \item Data (T = 4), sehingga (P(T) = \frac{4}{8} = 0.5).
+\end{array}\]</div>
+<p>Likelihoods:</p>
+<ul class="simple">
+<li><p>Dari tabel, tidak ada data eksplisit untuk “paruh baya” dengan tekanan darah “sangat tinggi”. Namun, kita bisa menggunakan asumsi atau interpolasi berdasarkan pola data yang tersedia. Jika tidak ada pengamatan, probabilitas dapat dianggap nol.</p></li>
+</ul>
+<p>Evidence:</p>
+<ul class="simple">
+<li><p>Jika tidak ada pengamatan eksplisit untuk kombinasi “paruh baya” dan “sangat tinggi”, maka
+P(Paruh Baya,Sangat Tinggi)=0, yang membuat perhitungan probabilitas menjadi tak terdefinisi.</p></li>
+</ul>
 </section>
-<section id="operasi-and">
-<h2>Operasi AND<a class="headerlink" href="#operasi-and" title="Link to this heading">#</a></h2>
-<p>Operasi AND menghasilkan output 1 hanya jika kedua operandnya adalah 1. Dalam aljabar Boolean, operasi ini diwakili dengan tanda “<span class="math notranslate nohighlight">\(\land\)</span>”.</p>
-</section>
-<section id="operasi-or">
-<h2>Operasi OR<a class="headerlink" href="#operasi-or" title="Link to this heading">#</a></h2>
-<p>Operasi OR menghasilkan output 1 jika salah satu atau kedua operandnya adalah 1. Operasi ini diwakili dengan tanda “<span class="math notranslate nohighlight">\(\lor\)</span>”.</p>
-</section>
-<section id="operasi-xor">
-<h2>Operasi XOR<a class="headerlink" href="#operasi-xor" title="Link to this heading">#</a></h2>
-<p>XOR (Exclusive OR) adalah operasi yang menghasilkan output 1 hanya jika salah satu operand adalah 1, tetapi tidak keduanya. Ini diwakili dengan tanda “<span class="math notranslate nohighlight">\(\oplus\)</span>”.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>A</p></th>
-<th class="head"><p>NOT A (<span class="math notranslate nohighlight">\(\lnot\)</span> A)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>A</p></th>
-<th class="head"><p>B</p></th>
-<th class="head"><p>A AND B (A <span class="math notranslate nohighlight">\(\land\)</span> B)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>A</p></th>
-<th class="head"><p>B</p></th>
-<th class="head"><p>A OR B (A <span class="math notranslate nohighlight">\(\lor\)</span> B)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>A</p></th>
-<th class="head"><p>B</p></th>
-<th class="head"><p>A XOR B (A <span class="math notranslate nohighlight">\(\oplus\)</span> B)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="tabel-kebenaran-gerbang-logika">
-<h2>% Tabel Kebenaran Gerbang Logika<a class="headerlink" href="#tabel-kebenaran-gerbang-logika" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>A</p></th>
-<th class="head"><p>Output</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>A</p></th>
-<th class="head"><p>B</p></th>
-<th class="head"><p>Output</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>A</p></th>
-<th class="head"><p>B</p></th>
-<th class="head"><p>Output</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>A</p></th>
-<th class="head"><p>B</p></th>
-<th class="head"><p>Output</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<section id="ringkasan">
-<h3>Ringkasan<a class="headerlink" href="#ringkasan" title="Link to this heading">#</a></h3>
-<p>AND: Benar jika kedua operand benar.
-OR: Benar jika salah satu atau kedua operand benar.
-NOT: Membalik nilai operand.
-XOR: Benar jika hanya salah satu operand yang benar.</p>
-</section>
+<section class="tex2jax_ignore mathjax_ignore" id="teorema-bayes">
+<h1>Teorema Bayes<a class="headerlink" href="#teorema-bayes" title="Link to this heading">#</a></h1>
+<p>Teorema Bayes memberi tahu kita cara menghitung probabilitas bersyarat dari suatu kejadian berdasarkan pengetahuan sebelumnya tentang kejadian tersebut. Dengan kata lain, Teorema Bayes memungkinkan kita menghitung probabilitas posterior berdasarkan probabilitas sebelumnya</p>
+<div class="math notranslate nohighlight">
+\[P(E|C) = \frac{P(C|E) \cdot P(E)}{P(C)}\]</div>
+<p>Dalam persamaan ini, kita memiliki empat istilah berikut:</p>
+<p>*1. P(E|C): Probabilitas kondisi E diberikan bahwa C terjadi.</p>
+<p>Ini adalah probabilitas dari peristiwa E yang terjadi, dengan informasi bahwa peristiwa C sudah terjadi. Dalam istilah lain, ini disebut posterior probability atau probabilitas posterior. Ini adalah apa yang kita coba untuk hitung atau pelajari.</p>
+<ol class="arabic simple" start="2">
+<li><p>P(C|E): Probabilitas kondisi C diberikan bahwa E terjadi.</p></li>
+</ol>
+<p>Ini adalah probabilitas dari peristiwa C terjadi dengan asumsi bahwa peristiwa E sudah terjadi. Ini disebut likelihood atau kemungkinan, karena menunjukkan seberapa besar kemungkinan data (peristiwa C) terjadi jika kita sudah tahu bahwa peristiwa E sudah terjadi.</p>
+<ol class="arabic simple" start="3">
+<li><p>P(E): Prior probability dari peristiwa E.</p></li>
+</ol>
+<p>Ini adalah probabilitas dari peristiwa E terjadi tanpa memperhitungkan informasi dari C. Ini disebut prior probability karena ini adalah pengetahuan kita sebelumnya (sebelum memperhitungkan data atau informasi baru).</p>
+<ol class="arabic simple" start="4">
+<li><p>P(C ): Probabilitas dari peristiwa C.</p></li>
+</ol>
+<p>Ini adalah probabilitas bahwa peristiwa C terjadi secara keseluruhan, tanpa memperhatikan apakah peristiwa E terjadi atau tidak. Ini disebut normalizing constant atau konstanta normalisasi, yang bertujuan untuk memastikan bahwa total probabilitas P(E|C) adalah angka yang valid (antara 0 dan 1).</p>
 <section id="references">
-<h3>REFERENCES<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://www.dicoding.com/blog/gerbang-logika-dan-tabel-kebenaran/">https://www.dicoding.com/blog/gerbang-logika-dan-tabel-kebenaran/</a></p>
-</section>
+<h2>references<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://tvovalentin.medium.com/the-math-behind-a-discrete-naive-bayes-classifier-abdc86e1cbf3">https://tvovalentin.medium.com/the-math-behind-a-discrete-naive-bayes-classifier-abdc86e1cbf3</a></p>
 </section>
 </section>
 
@@ -664,12 +563,12 @@ XOR: Benar jika hanya salah satu operand yang benar.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ALGORITMA.html"
+       href="DERETAN_DAN_REKURSIF.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">ALGORITMA</p>
+        <p class="prev-next-title">Deretan_Dan_Rekursif</p>
       </div>
     </a>
 </div>
@@ -688,16 +587,13 @@ XOR: Benar jika hanya salah satu operand yang benar.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-not">Operasi NOT</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-and">Operasi AND</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-or">Operasi OR</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-xor">Operasi XOR</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabel-kebenaran-gerbang-logika">% Tabel Kebenaran Gerbang Logika</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan">Ringkasan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">REFERENCES</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Naive Bayes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-bayes">Teorema Bayes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">references</a></li>
 </ul>
 </li>
 </ul>
+
   </nav></div>
 
 </div></div>
