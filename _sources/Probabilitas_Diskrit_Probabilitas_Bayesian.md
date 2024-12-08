@@ -2,8 +2,8 @@
 title: Probabilitas_Diskrit_Probabilitas_Bayesian
 
 ---
-
-# Naive Bayes
+# Probabilitas_Diskrit_Probabilitas_Bayesian
+## Naive Bayes
 Naive Bayes adalah salah satu dari banyak model pengklasifikasi yang ada. Model ini pada dasarnya didasarkan pada Teorema Bayes dan menggunakan asumsi "naif" bahwa semua fitur bersifat independen.
 
 X₁ (Suhu) dan X₂ (Angin). Fitur X₁ dapat mengasumsikan tiga nilai diskret (rendah, sedang, tinggi), sementara fitur X₂ dapat mengasumsikan tiga nilai diskret yang berbeda (lemah, normal, kuat). Untuk menyederhanakannya, kita akan menggunakan X₁ sebagai singkatan untuk Suhu, dan X₂ untuk Angin. Target Pantai kita akan disingkat menjadi B.
@@ -111,7 +111,7 @@ P(Paruh Baya,Sangat Tinggi)=0, yang membuat perhitungan probabilitas menjadi t
 
 
 
-# Teorema Bayes
+## Teorema Bayes
 Teorema Bayes memberi tahu kita cara menghitung probabilitas bersyarat dari suatu kejadian berdasarkan pengetahuan sebelumnya tentang kejadian tersebut. Dengan kata lain, Teorema Bayes memungkinkan kita menghitung probabilitas posterior berdasarkan probabilitas sebelumnya 
 
 $$P(E|C) = \frac{P(C|E) \cdot P(E)}{P(C)}$$

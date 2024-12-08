@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Naive Bayes &#8212; Matematika Diskret</title>
+    <title>Probabilitas_Diskrit_Probabilitas_Bayesian &#8212; Matematika Diskret</title>
   
   
   
@@ -187,8 +187,7 @@
 <li class="toctree-l1"><a class="reference internal" href="BOOLEAN.html">ALJABAR_BOOLEAN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Centrality_graph.html">Centrality graph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DERETAN_DAN_REKURSIF.html">Deretan_Dan_Rekursif</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Naive Bayes</a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Probabilitas_Diskrit_Probabilitas_Bayesian</a></li>
 </ul>
 
     </div>
@@ -374,7 +373,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Naive Bayes</h1>
+    <h1>Probabilitas_Diskrit_Probabilitas_Bayesian</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,13 +383,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Naive Bayes</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-bayes">Teorema Bayes</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">references</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">Naive Bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-bayes">Teorema Bayes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">references</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -401,8 +399,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="naive-bayes">
-<h1>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="probabilitas-diskrit-probabilitas-bayesian">
+<h1>Probabilitas_Diskrit_Probabilitas_Bayesian<a class="headerlink" href="#probabilitas-diskrit-probabilitas-bayesian" title="Link to this heading">#</a></h1>
+<section id="naive-bayes">
+<h2>Naive Bayes<a class="headerlink" href="#naive-bayes" title="Link to this heading">#</a></h2>
 <p>Naive Bayes adalah salah satu dari banyak model pengklasifikasi yang ada. Model ini pada dasarnya didasarkan pada Teorema Bayes dan menggunakan asumsi “naif” bahwa semua fitur bersifat independen.</p>
 <p>X₁ (Suhu) dan X₂ (Angin). Fitur X₁ dapat mengasumsikan tiga nilai diskret (rendah, sedang, tinggi), sementara fitur X₂ dapat mengasumsikan tiga nilai diskret yang berbeda (lemah, normal, kuat). Untuk menyederhanakannya, kita akan menggunakan X₁ sebagai singkatan untuk Suhu, dan X₂ untuk Angin. Target Pantai kita akan disingkat menjadi B.</p>
 <p>Tabel di bawah ini berisi beberapa catatan fitur X₁ , X₂ , dan target B. Yang terakhir dapat mengasumsikan nilai Boolean benar (pergi ke pantai) atau salah (jangan pergi ke pantai).</p>
@@ -506,8 +506,8 @@ H (atau 𝑇) berusia “paruh baya” dengan tekanan darah “sangat tinggi”.
 P(Paruh Baya,Sangat Tinggi)=0, yang membuat perhitungan probabilitas menjadi tak terdefinisi.</p></li>
 </ul>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="teorema-bayes">
-<h1>Teorema Bayes<a class="headerlink" href="#teorema-bayes" title="Link to this heading">#</a></h1>
+<section id="teorema-bayes">
+<h2>Teorema Bayes<a class="headerlink" href="#teorema-bayes" title="Link to this heading">#</a></h2>
 <p>Teorema Bayes memberi tahu kita cara menghitung probabilitas bersyarat dari suatu kejadian berdasarkan pengetahuan sebelumnya tentang kejadian tersebut. Dengan kata lain, Teorema Bayes memungkinkan kita menghitung probabilitas posterior berdasarkan probabilitas sebelumnya</p>
 <div class="math notranslate nohighlight">
 \[P(E|C) = \frac{P(C|E) \cdot P(E)}{P(C)}\]</div>
@@ -527,8 +527,9 @@ P(Paruh Baya,Sangat Tinggi)=0, yang membuat perhitungan probabilitas menjadi t
 </ol>
 <p>Ini adalah probabilitas bahwa peristiwa C terjadi secara keseluruhan, tanpa memperhatikan apakah peristiwa E terjadi atau tidak. Ini disebut normalizing constant atau konstanta normalisasi, yang bertujuan untuk memastikan bahwa total probabilitas P(E|C) adalah angka yang valid (antara 0 dan 1).</p>
 <section id="references">
-<h2>references<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<h3>references<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://tvovalentin.medium.com/the-math-behind-a-discrete-naive-bayes-classifier-abdc86e1cbf3">https://tvovalentin.medium.com/the-math-behind-a-discrete-naive-bayes-classifier-abdc86e1cbf3</a></p>
+</section>
 </section>
 </section>
 
@@ -587,13 +588,12 @@ P(Paruh Baya,Sangat Tinggi)=0, yang membuat perhitungan probabilitas menjadi t
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Naive Bayes</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-bayes">Teorema Bayes</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">references</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-bayes">Naive Bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teorema-bayes">Teorema Bayes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">references</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
